@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80">
-  <g font-family="Oswald, Impact, sans-serif" font-weight="700">
-    <text x="0" y="58" font-size="64" fill="#F1B82D" letter-spacing="-2">MU</text>
-    <line x1="92" y1="14" x2="92" y2="68" stroke="#F1B82D" stroke-width="2" opacity="0.5"/>
-    <text x="106" y="36" font-size="20" fill="#fff" letter-spacing="2.5" font-weight="600">EMERGENCY MEDICINE</text>
-    <text x="106" y="62" font-size="14" fill="#9ca3af" letter-spacing="3.5" font-weight="500">CRITICAL DX REFERENCE</text>
-  </g>
-</svg>

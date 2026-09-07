@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <rect width="256" height="256" rx="48" fill="#000000"/>
-  <g fill="#F1B82D" font-family="Oswald, Impact, sans-serif" font-weight="700">
-    <text x="128" y="135" text-anchor="middle" font-size="120" letter-spacing="-4">MU</text>
-    <text x="128" y="190" text-anchor="middle" font-size="34" letter-spacing="2">EM</text>
-  </g>
-  <rect x="24" y="206" width="208" height="3" fill="#F1B82D" opacity="0.6"/>
-</svg>
