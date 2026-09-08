@@ -105,19 +105,29 @@ html, body, #root {
      chip too wide for the column must stay inside it. `normal` wraps only when the
      chip does not fit, so short ranges like "10–20 mL/kg" are left intact; the
      inline-block + max-width keeps a wrapped chip one rounded box rather than two
-     torn fragments. This is the safety net, not the primary fix — chips are kept
-     to the numbers themselves (drug names and diluents live outside), which fits
-     every chip on one line at 360px and up. At 320px (SE 1st gen) ~36 still wrap,
-     and this rule is what makes that land as a tidy two-line chip. */
+     torn fragments. This is the safety net, not the primary fix — the chips were
+     themselves shortened to the dose expression (quantity, unit, rate, route,
+     frequency), pulling the drug name out into the surrounding sentence wherever
+     a chip would otherwise overflow. That is a width rule, not a rigid convention:
+     plenty of chips still carry a drug name, diluent or landmark because they
+     already fit. Net result — every chip sits on one line at 360px and up; ~36
+     still wrap at 320px (SE 1st gen), which this rule renders as a two-line chip. */
   display: inline-block;
   max-width: 100%;
   white-space: normal;
   overflow-wrap: break-word;
-  /* inline-block makes the chip's box height count toward the line box, which
-     inline padding never did — without this, lines carrying a chip render ~1.8px
-     taller than plain lines and the list rhythm goes uneven. 19px is the largest
-     value that keeps a chip line exactly equal to a plain 24px line. */
-  line-height: 19px;
+  /* Pin the leading so the chip's box height does not depend on font metrics.
+     inline-block makes that box count toward the line box (inline padding never
+     did), so with `normal` the chip is 21px once JetBrains Mono has loaded but
+     25px against the fallback — every chip line jumps 1.8px when the webfont
+     swaps in. Pinned, it is 23px in both states and nothing moves.
+     Value is deliberate on two counts. Unitless, so the leading follows the text
+     if a font-size-only override enlarges the chip (page zoom scales both
+     regardless). And 1.462, not 19/13 = 1.4615: 13 × 1.462 = 19.006px rounds up
+     and keeps a chip-bearing line exactly equal to a plain 24px line, where
+     1.4615 gives 18.9995px, rounds down, and puts a quarter of the list items
+     ~1px out. Measured, not derived — re-measure before changing it. */
+  line-height: 1.462;
 }
 
 /* ── Shimmer dot ──────────────────────────────────────── */
