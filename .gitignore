@@ -22,3 +22,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Env / secrets — never commit (portfolio standard, root CLAUDE.md)
+.env
+.env.*
+*.env
+*service-account*.json
+*-service-account.json
+firebase-adminsdk*.json
+secrets/
+
+# Machine-local Claude Code permissions (*.local does not match a .json suffix)
+.claude/settings.local.json
