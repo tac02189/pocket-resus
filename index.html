@@ -6,8 +6,11 @@
 <title>Pocket Resus has moved</title>
 <link rel="canonical" href="https://pocket-resus.web.app/" />
 <meta name="robots" content="noindex, follow" />
-<!-- Fallback for clients that ignore the script below. -->
-<meta http-equiv="refresh" content="3; url=https://pocket-resus.web.app/" />
+<!-- No meta-refresh fallback on purpose. It could only ever target the root, so it sent
+     no-JS visitors to the wrong page; it imposed an uncancellable 3s deadline (WCAG 2.2.1);
+     and because it pushes a history entry, Back landed here and restarted the countdown.
+     Without JS this app cannot run anyway, so a persistent page with a working link beats
+     an auto-redirect to a React SPA the visitor could not have used. -->
 <style>
   :root { --gold:#F1B82D; --ink:#f3f4f6; --muted:#9ca3af; --bg:#0a0a0a; --card:#141414; --border:#222; }
   * { box-sizing:border-box; }
@@ -32,7 +35,7 @@
     font-weight:600; word-break:break-all;
   }
   a.go:hover { border-color:var(--gold); }
-  .note { margin-top:20px; font-size:12px; color:#6b7280; }
+  .note { margin-top:20px; font-size:12px; color:var(--muted); }
   noscript p { color:var(--gold); }
 </style>
 </head>
@@ -42,14 +45,14 @@
   <h1>This app has a new home</h1>
   <p>The GitHub Pages copy is retired and no longer updated. Redirecting you now&nbsp;&mdash;</p>
   <a class="go" id="target" href="https://pocket-resus.web.app/">pocket-resus.web.app</a>
-  <noscript><p>JavaScript is off &mdash; use the link above.</p></noscript>
+  <noscript><p>JavaScript is off &mdash; this app needs it. Use the link above.</p></noscript>
   <div class="note">Bookmark the new address. This page will be removed.</div>
 </main>
 <script>
   // Carry the deep link across: /pocket-resus/dx/foo -> https://pocket-resus.web.app/dx/foo
   (function () {
     var NEW = "https://pocket-resus.web.app";
-    var p = location.pathname.replace(/^\/pocket-resus/, "");
+    var p = location.pathname.replace(/^\/pocket-resus(?=\/|$)/, "");
     if (p === "/index.html") p = "/";
     if (!p.startsWith("/")) p = "/" + p;
     var url = NEW + p + location.search + location.hash;
