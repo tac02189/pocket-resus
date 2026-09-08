@@ -105,11 +105,19 @@ html, body, #root {
      chip too wide for the column must stay inside it. `normal` wraps only when the
      chip does not fit, so short ranges like "10–20 mL/kg" are left intact; the
      inline-block + max-width keeps a wrapped chip one rounded box rather than two
-     torn fragments. Content is also kept short enough that this rarely triggers. */
+     torn fragments. This is the safety net, not the primary fix — chips are kept
+     to the numbers themselves (drug names and diluents live outside), which fits
+     every chip on one line at 360px and up. At 320px (SE 1st gen) ~36 still wrap,
+     and this rule is what makes that land as a tidy two-line chip. */
   display: inline-block;
   max-width: 100%;
   white-space: normal;
   overflow-wrap: break-word;
+  /* inline-block makes the chip's box height count toward the line box, which
+     inline padding never did — without this, lines carrying a chip render ~1.8px
+     taller than plain lines and the list rhythm goes uneven. 19px is the largest
+     value that keeps a chip line exactly equal to a plain 24px line. */
+  line-height: 19px;
 }
 
 /* ── Shimmer dot ──────────────────────────────────────── */

@@ -23,7 +23,7 @@ export const DIAGNOSES = [
           "**Intubation** — if altered, seizing, or airway compromise; use ketamine for RSI; avoid succinylcholine if prolonged arrest",
           "**Seizures** — `Lorazepam 2–4 mg IV`; benzos first-line; **avoid phenytoin**",
           "**Hypotension refractory to bicarb** — `Norepinephrine` vasopressor of choice; avoid dopamine",
-          "**Lipid emulsion** (refractory arrest) — `Intralipid 20%: 1.5 mL/kg IV bolus` over 1 min, then `0.25 mL/kg/min × 30–60 min`",
+          "**Lipid emulsion** (refractory arrest) — Intralipid 20%: `1.5 mL/kg IV bolus` over 1 min, then `0.25 mL/kg/min × 30–60 min`",
         ],
       },
       {
@@ -199,14 +199,14 @@ export const DIAGNOSES = [
         heading: "First-line antidotes",
         items: [
           "**Calcium** — Calcium chloride `1 g IV` (10 mL of 10% solution) or `Calcium gluconate 3 g IV`; repeat q3–5 min × 3–4; then infusion `0.2–0.4 mEq/kg/hr`",
-          "**High-dose insulin euglycemia (HIE)** — `Regular insulin 1 unit/kg IV bolus`, then `1 unit/kg/hr infusion`; D50 bolus + dextrose infusion to maintain glucose 100–250; check glucose q15–30 min; check K+ q30–60 min",
+          "**High-dose insulin euglycemia (HIE)** — Regular insulin `1 unit/kg IV bolus`, then `1 unit/kg/hr infusion`; D50 bolus + dextrose infusion to maintain glucose 100–250; check glucose q15–30 min; check K+ q30–60 min",
           "**Norepinephrine** — vasopressor of choice for hypotension; titrate to MAP >65",
         ],
       },
       {
         heading: "Second-line / refractory",
         items: [
-          "**Lipid emulsion** — `Intralipid 20%: 1.5 mL/kg IV bolus` over 1 min, then `0.25 mL/kg/min × 30–60 min`",
+          "**Lipid emulsion** — Intralipid 20%: `1.5 mL/kg IV bolus` over 1 min, then `0.25 mL/kg/min × 30–60 min`",
           "**Glucagon** — `3–10 mg IV bolus`, then `3–10 mg/hr infusion` (limited evidence, often fails CCB)",
           "**Methylene blue** — `1–2 mg/kg IV` if vasoplegic (refractory vasoplegia/distributive shock)",
           "**ECMO** — early consideration in refractory shock; activate team early",
@@ -280,8 +280,8 @@ export const DIAGNOSES = [
         heading: "Drugs & doses",
         items: [
           "**Glucagon** (first-line for BB) — `3–10 mg IV bolus over 1 min`, then `3–10 mg/hr infusion`; acts via non-adrenergic cAMP pathway; onset 5–10 min; watch for vomiting",
-          "**High-dose insulin euglycemia (HIE)** — `Regular insulin 1 unit/kg IV bolus`, then `1 unit/kg/hr`; dextrose co-infusion; increasingly preferred over glucagon",
-          "**Calcium** — `Calcium chloride 1 g IV q5 min × 3`; especially useful for membrane-stabilizing BB (propranolol)",
+          "**High-dose insulin euglycemia (HIE)** — Regular insulin `1 unit/kg IV bolus`, then `1 unit/kg/hr`; dextrose co-infusion; increasingly preferred over glucagon",
+          "**Calcium** — Calcium chloride `1 g IV q5 min × 3`; especially useful for membrane-stabilizing BB (propranolol)",
           "**Norepinephrine or epinephrine** — vasopressor/chronotrope for refractory shock",
           "**Lipid emulsion** — `Intralipid 20%: 1.5 mL/kg bolus` for lipid-soluble BB (propranolol, metoprolol, carvedilol)",
           "**Sodium bicarb** — `1–2 mEq/kg IV` if QRS widened (propranolol has Na-channel blocking properties)",
@@ -360,8 +360,8 @@ export const DIAGNOSES = [
       {
         heading: "Lipid emulsion (definitive treatment)",
         items: [
-          "`Intralipid 20%: 1.5 mL/kg IV bolus` over 1 min (≈100 mL for 70 kg adult)",
-          "Then `0.25 mL/kg/min continuous infusion` (≈18 mL/min for 70 kg)",
+          "Intralipid 20%: `1.5 mL/kg IV bolus` over 1 min (≈100 mL for 70 kg adult)",
+          "Then `0.25 mL/kg/min` continuous infusion (≈18 mL/min for 70 kg)",
           "If cardiovascular collapse persists: repeat bolus × 1–2",
           "Continue infusion for at least 10 min after hemodynamic stability",
           "Max dose: `~12 mL/kg`",
@@ -438,9 +438,9 @@ export const DIAGNOSES = [
         heading: "Calcium (binds fluoride)",
         items: [
           "**Topical (skin burns)** — `2.5% calcium gluconate gel` massaged into affected area continuously until pain-free; re-apply q10–15 min; can make gel: mix 3.5 g calcium gluconate powder in 150 mL water-soluble lubricant",
-          "**Subcutaneous/intradermal injection** — `5% calcium gluconate solution 0.5 mL/cm²` of burn area (needle deposition under and around lesion)",
-          "**Intra-arterial infusion (hand/digits)** — `10 mL of 10% calcium gluconate in 40 mL D5W` infused into radial or brachial artery over 4 h via arterial line; consider for refractory digital pain",
-          "**Systemic / IV** — `Calcium gluconate 10–20 mL of 10% IV` for systemic toxicity/dysrhythmia; aggressive repletion",
+          "**Subcutaneous/intradermal injection** — 5% calcium gluconate solution `0.5 mL/cm²` of burn area (needle deposition under and around lesion)",
+          "**Intra-arterial infusion (hand/digits)** — `10 mL` of 10% calcium gluconate in `40 mL` D5W infused into radial or brachial artery over 4 h via arterial line; consider for refractory digital pain",
+          "**Systemic / IV** — Calcium gluconate `10–20 mL of 10% IV` for systemic toxicity/dysrhythmia; aggressive repletion",
         ],
       },
       {
@@ -735,7 +735,7 @@ export const DIAGNOSES = [
       {
         heading: "Pralidoxime (2-PAM) — OP only, not carbamates",
         items: [
-          "`Pralidoxime (2-PAM) 1–2 g IV over 15–30 min`, then `0.5 g/hr infusion`",
+          "Pralidoxime (2-PAM) `1–2 g IV` over `15–30 min`, then `0.5 g/hr infusion`",
           "Give as early as possible — reactivates cholinesterase before 'aging' occurs (24–48 h window for most agents)",
           "Controversial in some guidelines but still standard of care in US for OP",
         ],
@@ -872,7 +872,7 @@ export const DIAGNOSES = [
       {
         heading: "Antidote — Fomepizole first-line",
         items: [
-          "`Fomepizole (4-MP) 15 mg/kg IV loading dose` over 30 min, then `10 mg/kg IV q12h × 4 doses`, then `15 mg/kg q12h`",
+          "Fomepizole (4-MP) `15 mg/kg IV` loading dose over 30 min, then `10 mg/kg IV q12h × 4 doses`, then `15 mg/kg q12h`",
           "Blocks alcohol dehydrogenase — prevents formation of toxic metabolites",
           "Use ethanol if fomepizole unavailable: target blood ethanol level `100–150 mg/dL`",
         ],
@@ -940,7 +940,7 @@ export const DIAGNOSES = [
       {
         heading: "Antidote — Pyridoxine (Vitamin B6)",
         items: [
-          "**If known INH amount ingested**: `Pyridoxine 1 g IV per gram of INH ingested` over 5–10 min",
+          "**If known INH amount ingested**: Pyridoxine `1 g IV` per gram of INH ingested over 5–10 min",
           "**If amount unknown**: `Pyridoxine 5 g IV` over 5–10 min; repeat until seizures stop",
           "Pediatric: `70 mg/kg IV` (max 5 g)",
           "**This is the definitive treatment** — benzodiazepines alone are often insufficient",
@@ -1510,7 +1510,7 @@ export const DIAGNOSES = [
           "`Dantrolene 2.5 mg/kg IV bolus` immediately — get it regardless of whether MH 100% confirmed",
           "Repeat `1–2.5 mg/kg` q5 min until rigidity resolves, temperature falls, ETCO₂ normalizes",
           "Average total dose: `10 mg/kg`; can use up to `30 mg/kg`",
-          "`Dantrolene 1 mg/kg IV q4–6h × 24–48 h` after acute episode to prevent recurrence",
+          "Dantrolene `1 mg/kg IV q4–6h` × `24–48 h` after acute episode to prevent recurrence",
         ],
       },
       {
@@ -1722,7 +1722,7 @@ export const DIAGNOSES = [
         heading: "Empiric antibiotics",
         items: [
           "`Vancomycin 25–30 mg/kg IV` (loading dose, target trough 15–20; or AUC-based dosing) — covers MRSA",
-          "`Cefepime 2 g IV q8h` OR `Piperacillin-tazobactam 4.5 g IV q6h` — gram-negative coverage",
+          "`Cefepime 2 g IV q8h` OR Piperacillin-tazobactam `4.5 g IV q6h` — gram-negative coverage",
           "Add `Metronidazole 500 mg IV q8h` if anaerobic source suspected (GI surgery, odontogenic)",
           "Duration typically 4–8 weeks (IV → PO transition per ID)",
         ],
@@ -1802,7 +1802,7 @@ export const DIAGNOSES = [
         items: [
           "Goal: HR <60 bpm, SBP 100–120 mmHg (tolerated) — reduce aortic wall stress",
           "**Beta-blocker first** — `Esmolol 500 mcg/kg IV bolus`, then `50–200 mcg/kg/min infusion`; OR `Labetalol 20 mg IV q10 min` (max 300 mg), then infusion",
-          "**Add vasodilator if SBP still elevated after HR controlled**: `Nicardipine 5 mg/hr IV`, titrate to 15 mg/hr; OR `Sodium nitroprusside 0.5–10 mcg/kg/min` (only after beta-blocker given)",
+          "**Add vasodilator if SBP still elevated after HR controlled**: `Nicardipine 5 mg/hr IV`, titrate to 15 mg/hr; OR Sodium nitroprusside `0.5–10 mcg/kg/min` (only after beta-blocker given)",
           "**Never give vasodilator without beta-blocker** — reflex tachycardia ↑ aortic shear stress",
         ],
       },
@@ -1870,7 +1870,7 @@ export const DIAGNOSES = [
       {
         heading: "Eclampsia (seizures)",
         items: [
-          "**Magnesium sulfate** — `4–6 g IV over 15–20 min loading dose`, then `2 g/hr infusion`",
+          "**Magnesium sulfate** — `4–6 g IV` over `15–20 min` loading dose, then `2 g/hr infusion`",
           "Refractory seizures: `MgSO₄ 2 g IV bolus` repeat; then lorazepam or diazepam; monitor for Mg toxicity",
           "Magnesium toxicity: loss of DTRs (first sign), respiratory depression, cardiac arrest — treat with `Calcium gluconate 1 g IV`",
           "Lateral decubitus positioning; supplemental O₂; prepare for emergency delivery",
@@ -1970,7 +1970,7 @@ export const DIAGNOSES = [
         heading: "Atony — uterotonics + maneuvers",
         items: [
           "**Bimanual uterine massage** first-line, immediately",
-          "**Oxytocin** — `10–40 units in 500–1000 mL NS IV infusion` (or 10 units IM); avoid rapid IV push (hypotension)",
+          "**Oxytocin** — `10–40 units` in `500–1000 mL` NS IV infusion (or 10 units IM); avoid rapid IV push (hypotension)",
           "**Methylergonovine** — `0.2 mg IM` q2–4h; **contraindicated in HTN/pre-eclampsia**",
           "**Carboprost (Hemabate)** — `250 mcg IM` q15–90 min (max 2 mg); **contraindicated in asthma**",
           "**Misoprostol** — `800–1000 mcg rectal/sublingual` ×1",
@@ -2294,7 +2294,7 @@ export const DIAGNOSES = [
       {
         heading: "Heparin / LMWH",
         items: [
-          "**UFH**: `Protamine 1 mg per 100 units heparin` (given within 30 min; reduce to 0.5 mg/100 units if >30 min); max single dose `50 mg IV` slow over 10 min; anaphylaxis risk",
+          "**UFH**: Protamine `1 mg` per `100 units` heparin (given within 30 min; reduce to 0.5 mg/100 units if >30 min); max single dose `50 mg IV` slow over 10 min; anaphylaxis risk",
           "**LMWH**: Protamine partially effective — `1 mg per 1 mg enoxaparin`; only neutralizes ~60% of anti-Xa activity",
         ],
       },
@@ -2526,7 +2526,7 @@ export const DIAGNOSES = [
       {
         heading: "Adjuncts",
         items: [
-          "**Corticosteroids** — `Methylprednisolone 1 g IV daily × 3 days`, then prednisone `1 mg/kg/day PO`",
+          "**Corticosteroids** — Methylprednisolone `1 g IV daily × 3 days`, then prednisone `1 mg/kg/day PO`",
           "**Caplacizumab (Cablivi)** — `11 mg IV` day 1 (before PLEX), then `11 mg SQ daily`; anti-VWF nanobody; reduces recurrence, time to platelet response, and mortality; continue 30 days after last PLEX",
           "**Rituximab** — `375 mg/m² IV weekly × 4` for ADAMTS13 <10% or refractory/relapsing disease",
           "Folic acid supplementation (hemolysis); PPI (steroid prophylaxis)",
@@ -2665,7 +2665,7 @@ export const DIAGNOSES = [
           "Antibiotics CONTRAINDICATED for confirmed STEC (worsens outcomes)",
           "Plasma exchange NOT routinely beneficial for STEC-HUS (unlike TTP)",
           "Antimotility drugs (loperamide), NSAIDs CONTRAINDICATED — worsen kidney injury and toxin clearance",
-          "**Atypical HUS**: eculizumab — adult/≥40 kg `900 mg IV weekly ×4, then 1200 mg q2 weeks` (peds weight-banded per nephrology) — must vaccinate for meningococcus or give prophylactic antibiotics (ceftriaxone, penicillin)",
+          "**Atypical HUS**: eculizumab — adult/≥40 kg `900 mg IV weekly ×4`, then `1200 mg q2 weeks` (peds weight-banded per nephrology) — must vaccinate for meningococcus or give prophylactic antibiotics (ceftriaxone, penicillin)",
           "Ravulizumab — longer-acting alternative to eculizumab",
           "**Pneumococcal HUS**: treat infection, plasma exchange may help; do NOT use plasma (contains anti-T antibodies)",
         ],
@@ -2723,7 +2723,7 @@ export const DIAGNOSES = [
       {
         heading: "ED treatment",
         items: [
-          "**Corticosteroids** (first-line): `Prednisone 1 mg/kg PO daily` × 1–2 weeks, taper; OR `Dexamethasone 40 mg PO daily × 4 days` (rapid response)",
+          "**Corticosteroids** (first-line): `Prednisone 1 mg/kg PO daily` × 1–2 weeks, taper; OR Dexamethasone `40 mg PO daily × 4 days` (rapid response)",
           "**IVIG `1 g/kg IV` × 1–2 doses** — rapid platelet rise (24–48h); for severe bleeding, pre-procedure, or steroid-resistant",
           "**Anti-D (WinRho)** `50–75 mcg/kg IV` — only in Rh+ non-splenectomized; risk of intravascular hemolysis",
           "**Severe / life-threatening bleeding (ICH)**: IVIG + high-dose steroids (methylprednisolone 1 g IV) + **platelet transfusion** (typically futile alone but use as adjunct in life threat) + antifibrinolytics (TXA)",
@@ -2978,14 +2978,14 @@ export const DIAGNOSES = [
         items: [
           "`Regular insulin 10 units IV` + `Dextrose 25 g IV` (D50 50 mL) simultaneously — lowers K+ 0.5–1.5 mEq/L",
           "`Albuterol 10–20 mg nebulized` (high-dose) — lowers K+ 0.5–1.0 mEq/L; additive to insulin; avoid if tachydysrhythmia",
-          "`Sodium bicarbonate 150 mEq in 1L D5W` — most effective if concomitant metabolic acidosis; less effective in ESRD",
+          "Sodium bicarbonate `150 mEq` in `1L D5W` — most effective if concomitant metabolic acidosis; less effective in ESRD",
         ],
       },
       {
         heading: "3. Remove K+ from body",
         items: [
           "`Furosemide 40–80 mg IV` if not anuric — renal K+ excretion",
-          "`Patiromer 8.4 g PO` (preferred) or `Sodium zirconium cyclosilicate 10 g PO` — onset 1–2 h; potassium binders",
+          "`Patiromer 8.4 g PO` (preferred) or Sodium zirconium cyclosilicate `10 g PO` — onset 1–2 h; potassium binders",
           "**Hemodialysis** — fastest definitive removal; for refractory/severe hyperkalemia or AKI/ESRD; contact nephrology early",
         ],
       },
@@ -3081,8 +3081,8 @@ export const DIAGNOSES = [
       {
         heading: "3. Bisphosphonate (definitive, delayed onset)",
         items: [
-          "`Zoledronic acid 4 mg IV over 15 min` — preferred, more potent",
-          "`Pamidronate 60–90 mg IV over 2–4 h` — alternative",
+          "Zoledronic acid `4 mg IV` over `15 min` — preferred, more potent",
+          "Pamidronate `60–90 mg IV` over `2–4 h` — alternative",
           "Onset 24–48 h; effect lasts 2–4 weeks",
           "Renal dosing — avoid if CrCl <30 (zoledronic acid)",
           "Watch for hypocalcemia 5–7 days post-dose",
@@ -3196,7 +3196,7 @@ export const DIAGNOSES = [
       {
         heading: "Hyperphosphatemia",
         items: [
-          "`Sevelamer 1600 mg PO TID with meals` (phosphate binder); avoid calcium-based binders (precipitates Ca-PO₄)",
+          "Sevelamer `1600 mg PO TID` with meals (phosphate binder); avoid calcium-based binders (precipitates Ca-PO₄)",
           "**Do NOT replace calcium unless symptomatic** (tetany, arrhythmia, seizure) — calcium + high PO₄ → vascular/renal calcification",
         ],
       },
@@ -3525,7 +3525,7 @@ export const DIAGNOSES = [
       {
         heading: "Antibiotics (start immediately)",
         items: [
-          "`Piperacillin-tazobactam 4.5 g IV q6h` + `Fluconazole 400 mg IV loading dose` (covers oral flora, gram-negatives, Candida)",
+          "Piperacillin-tazobactam `4.5 g IV q6h` + Fluconazole `400 mg IV` loading dose (covers oral flora, gram-negatives, Candida)",
           "Alternatively: `Meropenem 1 g IV q8h` + antifungal for critically ill/immunocompromised",
         ],
       },
@@ -4037,7 +4037,7 @@ export const DIAGNOSES = [
           "**Human tetanus immune globulin (TIG)** — `3,000–6,000 units IM ×1` (infiltrate around wound separately)",
           "**Metronidazole** — `500 mg IV q6–8h × 7–10 days` (preferred over PCN — no GABA antagonism)",
           "**Benzodiazepines** — diazepam `10–30 mg IV q1–4h prn` or midazolam infusion for spasms",
-          "**Magnesium sulfate** — `4–6 g IV load, then 1–3 g/h infusion` for autonomic instability",
+          "**Magnesium sulfate** — `4–6 g IV load`, then `1–3 g/h infusion` for autonomic instability",
           "**Vecuronium/rocuronium** — for refractory spasms once intubated",
           "Active vaccination (Td/Tdap) — disease does not confer immunity",
         ],
@@ -4201,7 +4201,7 @@ export const DIAGNOSES = [
       {
         heading: "Drugs & doses",
         items: [
-          "**IV artesunate** — `2.4 mg/kg IV at 0, 12, 24h, then daily × 7d` — first-line worldwide; available in US via CDC",
+          "**IV artesunate** — `2.4 mg/kg IV` at 0, 12, 24h, then daily × 7d — first-line worldwide; available in US via CDC",
           "Transition to PO after 24h IV + clinical improvement: artemether-lumefantrine, atovaquone-proguanil, or mefloquine ×3 days",
           "**If artesunate unavailable** — quinidine gluconate `10 mg/kg IV load over 1–2h`, then `0.02 mg/kg/min` (continuous cardiac monitoring; QTc prolongation)",
           "Empiric broad antibiotics if shock — coinfection common",
@@ -4376,7 +4376,7 @@ export const DIAGNOSES = [
       {
         heading: "Drugs & doses (CDC combination protocol)",
         items: [
-          "**Amphotericin B** — `1.5 mg/kg/day IV ×3 days, then 1 mg/kg/day` + intrathecal `1.5 mg q24h ×2 days, then 1 mg qod ×8 days`",
+          "**Amphotericin B** — `1.5 mg/kg/day IV ×3 days`, then `1 mg/kg/day` + intrathecal `1.5 mg q24h ×2 days`, then `1 mg qod ×8 days`",
           "**Miltefosine** — `50 mg PO TID` (≥45 kg) or `2.5 mg/kg/day div BID` (peds) × 28 days",
           "**Rifampin** `10 mg/kg/day IV/PO` + **Fluconazole** `10 mg/kg/day IV/PO` + **Azithromycin** `10 mg/kg/day IV/PO`",
           "**Dexamethasone** `0.6 mg/kg/day IV div q6h` for cerebral edema",
@@ -4549,7 +4549,7 @@ export const DIAGNOSES = [
           "**Streptomycin** `1 g IM BID × 10 days` — historic standard",
           "**Gentamicin** `5 mg/kg IV daily × 10 days` — preferred (more available)",
           "**Doxycycline** `100 mg IV/PO BID × 10–14 days` — alternative; mild disease",
-          "**Ciprofloxacin** `400 mg IV / 500 mg PO BID × 10 days`",
+          "**Ciprofloxacin** `400 mg IV` / `500 mg PO BID` × `10 days`",
           "Severe / pneumonic: combination (aminoglycoside + doxy or FQ)",
           "Peds: gentamicin `2.5 mg/kg IV q8h` or doxy `2.2 mg/kg q12h` (max 100 mg)",
         ],
@@ -4630,7 +4630,7 @@ export const DIAGNOSES = [
         items: [
           "**Streptomycin** `1 g IM BID × 10 days` OR **Gentamicin** `5 mg/kg IV daily × 10 days`",
           "**Doxycycline** `100 mg PO/IV BID × 14–21 days` — mild only (higher relapse)",
-          "**Ciprofloxacin** `400 mg IV / 500 mg PO BID × 10–14 days`",
+          "**Ciprofloxacin** `400 mg IV` / `500 mg PO BID` × `10–14 days`",
           "Peds: gentamicin `2.5 mg/kg IV q8h`",
           "**PEP** (bioterror exposure): doxy or cipro × 14 days",
         ],
@@ -4812,7 +4812,7 @@ export const DIAGNOSES = [
         items: [
           "**rFVIIa (NovoSeven)** — `90 mcg/kg IV q2–3h` until bleeding controlled; first-line bypass agent",
           "**Activated PCC (FEIBA)** — `50–100 units/kg IV q8–12h` (max 200 units/kg/day); alternative bypass",
-          "**Recombinant porcine FVIII (Obizur)** — `200 units/kg IV ×1, then dose to FVIII level`",
+          "**Recombinant porcine FVIII (Obizur)** — `200 units/kg IV ×1`, then dose to FVIII level",
           "FVIII concentrates rarely effective (inhibitor titer too high)",
           "**Eradication of inhibitor** (start early, even during acute bleed):",
           "**Prednisone** `1 mg/kg/day` ± **cyclophosphamide** `1–2 mg/kg/day` ± **rituximab** `375 mg/m² weekly ×4`",
@@ -5108,7 +5108,7 @@ export const DIAGNOSES = [
         heading: "Treatment",
         items: [
           "`Prednisone 12.5–25 mg PO daily` — start low; most respond within 24–72 h",
-          "If concomitant GCA suspected: `Prednisone 40–60 mg PO daily` (or `methylprednisolone 1 g IV × 3 days` for vision threat)",
+          "If concomitant GCA suspected: `Prednisone 40–60 mg PO daily` (or methylprednisolone `1 g IV × 3 days` for vision threat)",
           "Symptoms should improve dramatically — if not, reconsider diagnosis",
           "Calcium 1200 mg + vitamin D 800 IU daily; consider bisphosphonate prophylaxis (long-course steroids)",
           "PPI for GI prophylaxis if NSAID co-use or high risk",
@@ -5669,7 +5669,7 @@ export const DIAGNOSES = [
         items: [
           "**IV available**: `Lorazepam 0.1 mg/kg IV` (max `4 mg`/dose), may repeat ×1 at 5 min",
           "**No IV access**: `Midazolam 10 mg IM` (≥40 kg) — per RAMPART, IM midazolam ≥ IV lorazepam for prehospital SE",
-          "Alternatives: `Diazepam 0.15–0.2 mg/kg IV` (max `10 mg`) or `Diazepam 0.5 mg/kg PR`; `Midazolam 0.2 mg/kg intranasal/buccal`",
+          "Alternatives: `Diazepam 0.15–0.2 mg/kg IV` (max `10 mg`) or `Diazepam 0.5 mg/kg PR`; Midazolam `0.2 mg/kg` intranasal/buccal",
           "**Under-dosing benzos is the #1 error** — give the full weight-based dose before escalating",
           "Peds: `Lorazepam 0.1 mg/kg IV` (max `4 mg`); `Midazolam 0.2 mg/kg IM` (max `10 mg`) or `0.3 mg/kg intranasal`; `Diazepam 0.5 mg/kg PR`",
         ],
@@ -6284,7 +6284,7 @@ export const DIAGNOSES = [
       {
         heading: "Massive PE → reperfuse NOW",
         items: [
-          "**Systemic thrombolysis** — `Alteplase (tPA) 100 mg IV over 2 h`; hold/reduce concurrent heparin infusion during the bolus per protocol",
+          "**Systemic thrombolysis** — Alteplase (tPA) `100 mg IV` over `2 h`; hold/reduce concurrent heparin infusion during the bolus per protocol",
           "**Cardiac arrest from PE**: `Alteplase 50 mg IV push` (may repeat 50 mg); **continue CPR 60–90 min** after lytic before terminating",
           "Catheter-directed therapy or surgical embolectomy if lysis contraindicated or fails",
           "**VA-ECMO** as a bridge in refractory shock/arrest at capable centers",
@@ -6580,7 +6580,7 @@ export const DIAGNOSES = [
       {
         heading: "First-line drug",
         items: [
-          "**Atropine** — `1 mg IV push, repeat q3–5 min, max 3 mg` total",
+          "**Atropine** — `1 mg IV push`, repeat `q3–5 min`, max `3 mg` total",
           "Most effective for sinus bradycardia and AV-nodal (narrow-complex) block",
           "**Often INEFFECTIVE in Mobitz II and complete (third-degree) heart block** — the block is infranodal; do not delay pacing waiting for atropine to work",
           "Use cautiously after cardiac transplant (denervated heart — may not respond) and in high-grade block — be ready to pace",
@@ -6655,7 +6655,7 @@ export const DIAGNOSES = [
         items: [
           "**Bradycardia in a child is hypoxic until proven otherwise** — **oxygenate and ventilate FIRST**; airway is the priority",
           "**Start CPR if HR <60 with poor perfusion despite oxygenation/ventilation** (PALS)",
-          "**Epinephrine** `0.01 mg/kg IV/IO (0.1 mL/kg of 1:10,000)` is the first-line drug; **atropine** `0.02 mg/kg` (min 0.1 mg) for vagal/AV-block or organophosphate causes",
+          "**Epinephrine** `0.01 mg/kg IV/IO` (0.1 mL/kg of 1:10,000) is the first-line drug; **atropine** `0.02 mg/kg` (min 0.1 mg) for vagal/AV-block or organophosphate causes",
           "Primary cardiac/heart-block bradycardia is uncommon in children — think respiratory and toxic/metabolic causes",
         ],
       },
@@ -6994,7 +6994,7 @@ export const DIAGNOSES = [
       {
         heading: "Immediate actions",
         items: [
-          "**Anticoagulate immediately: `unfractionated heparin 80 units/kg IV bolus`, then `18 units/kg/h infusion`** (unless contraindicated) — prevents clot propagation; do not wait for imaging",
+          "**Anticoagulate immediately: unfractionated heparin `80 units/kg IV bolus`, then `18 units/kg/h infusion`** (unless contraindicated) — prevents clot propagation; do not wait for imaging",
           "**Vascular surgery consult STAT** — time-critical, limb viability falls after **~6 hours** of ischemia",
           "**Keep the limb dependent and warm; do NOT elevate and do NOT apply heat or ice** — elevation reduces perfusion; external heat raises metabolic demand",
           "Analgesia, IV access, labs (CK, K⁺, lactate, renal function, coags, type & screen)",
@@ -7552,7 +7552,7 @@ export const DIAGNOSES = [
       {
         heading: "3. Insulin + endpoints",
         items: [
-          "`Regular insulin 0.1 units/kg IV bolus`, then `0.1 units/kg/h` infusion — OR no-bolus `0.14 units/kg/h` (equally effective)",
+          "Regular insulin `0.1 units/kg IV bolus`, then `0.1 units/kg/h` infusion — OR no-bolus `0.14 units/kg/h` (equally effective)",
           "Target glucose fall `50–75 mg/dL/h`; if not falling, double the rate (verify hydration first)",
           "**Continue insulin until the ANION GAP closes / ketones clear — NOT until glucose normalizes**; this is the most common error",
           "**PEDS**: NO insulin bolus; start `0.05–0.1 units/kg/h` only after first fluid hour",
@@ -7582,7 +7582,7 @@ export const DIAGNOSES = [
       {
         heading: "Sodium bicarbonate — almost never",
         items: [
-          "**Give bicarb ONLY if pH `<6.9`**: `100 mEq in 400 mL sterile water + 20 mEq KCl` over 2 h, recheck",
+          "**Give bicarb ONLY if pH `<6.9`**: `100 mEq` in `400 mL` sterile water + `20 mEq` KCl over 2 h, recheck",
           "No proven benefit at pH `≥6.9`; risks paradoxical CNS acidosis, hypokalemia, delayed ketone clearance, and cerebral edema (especially peds)",
           "Acidosis corrects as insulin halts ketogenesis and bicarbonate regenerates — treat the cause, not the number",
         ],
@@ -7654,7 +7654,7 @@ export const DIAGNOSES = [
       {
         heading: "Emergent — symptomatic hypertonic saline",
         items: [
-          "**`3% saline 100–150 mL IV bolus over 10 min`** — repeat `×2–3` at 10-min intervals until symptoms improve OR Na rises `4–6 mEq/L`",
+          "**3% saline `100–150 mL IV bolus` over `10 min`** — repeat `×2–3` at 10-min intervals until symptoms improve OR Na rises `4–6 mEq/L`",
           "Goal of the bolus is to **stop seizures / reverse herniation**, not to normalize sodium",
           "Peds: `3% saline 2–4 mL/kg` bolus over 10–15 min (max ~`100–150 mL`), repeatable",
           "A `4–6 mEq/L` rise reliably aborts neurologic emergencies — further acute correction is unnecessary and dangerous",
@@ -7998,7 +7998,7 @@ export const DIAGNOSES = [
       {
         heading: "NAC dosing (IV 21-h regimen)",
         items: [
-          "Loading: **`N-acetylcysteine 150 mg/kg IV over 60 min`**",
+          "Loading: **N-acetylcysteine `150 mg/kg IV` over `60 min`**",
           "Then **`50 mg/kg IV over 4 h`**",
           "Then **`100 mg/kg IV over 16 h`**",
           "Oral alternative: **`140 mg/kg PO load`, then `70 mg/kg PO q4h × 17 doses`**",
@@ -8874,7 +8874,7 @@ export const DIAGNOSES = [
       {
         heading: "Empiric antibiotics",
         items: [
-          "`Piperacillin-tazobactam 4.5 g IV q6–8h` — covers enteric gram-negatives, enterococcus, anaerobes",
+          "Piperacillin-tazobactam `4.5 g IV q6–8h` — covers enteric gram-negatives, enterococcus, anaerobes",
           "Alternative: `Ceftriaxone 2 g IV` + `Metronidazole 500 mg IV q8h`",
           "**Severe (Grade III) or healthcare-associated**: carbapenem — `Meropenem 1 g IV q8h` (add `Vancomycin 15–20 mg/kg IV` if MRSA/enterococcal risk)",
           "Narrow based on blood and bile culture results",
@@ -8978,7 +8978,7 @@ export const DIAGNOSES = [
         heading: "Treatment by severity",
         items: [
           "**Fulminant**: `Vancomycin 500 mg PO/NG q6h` + `Metronidazole 500 mg IV q8h`",
-          "**If ileus / megacolon**: ADD `Vancomycin 500 mg in 100 mL saline retention enema PR q6h` (oral vanc may not reach the colon)",
+          "**If ileus / megacolon**: ADD Vancomycin `500 mg` in `100 mL` saline retention enema PR `q6h` (oral vanc may not reach the colon)",
           "**Non-fulminant initial/recurrent episodes**: `Fidaxomicin 200 mg PO BID` (preferred) or `Vancomycin 125 mg PO QID`",
           "**Early surgical consultation** for any fulminant disease — do not wait for perforation",
         ],
@@ -9289,7 +9289,7 @@ export const DIAGNOSES = [
       items: [
         "**Immerse in circulating warm water `37-39°C` (99-102°F) for 15-30 min** until the part is pliable and red/purple and distal flush returns",
         "**Rewarming is extremely painful — give IV opioids** (e.g. `Morphine` or `Fentanyl`) and titrate",
-        "`Ibuprofen 12 mg/kg/day divided BID` (or `400 mg PO q8-12h`) — antiprostaglandin, limits thromboxane-mediated ischemia; start early",
+        "Ibuprofen `12 mg/kg/day` divided BID (or `400 mg PO q8-12h`) — antiprostaglandin, limits thromboxane-mediated ischemia; start early",
         "**Update tetanus**; topical `aloe vera` to thawed tissue q6h (thromboxane inhibitor)",
         "Leave clear/cloudy blisters intact (or aspirate); leave hemorrhagic blisters intact; dry sterile dressings, elevate, separate digits",
       ],
@@ -9837,7 +9837,7 @@ export const DIAGNOSES = [
       heading: "TRIPLE THERAPY — start immediately",
       items: [
         "**(1) Therapeutic anticoagulation** — `IV unfractionated Heparin` (titrated to therapeutic aPTT), preferred for titratability/reversibility in the unstable patient",
-        "**(2) High-dose corticosteroids** — `IV Methylprednisolone 1000 mg daily x3 days` (pulse), then taper",
+        "**(2) High-dose corticosteroids** — IV Methylprednisolone `1000 mg daily x3 days` (pulse), then taper",
         "**(3) Plasma exchange and/or IVIG** — **plasmapheresis** (removes antibodies/cytokines) and/or **`IVIG 0.4 g/kg/day x5 days`** (`2 g/kg` total)",
         "**Refractory/severe → `Rituximab` or `Eculizumab`** (especially with TMA features or coexisting microangiopathy)",
         "Consult **rheumatology and hematology** emergently; ICU-level care",
@@ -9930,7 +9930,7 @@ export const DIAGNOSES = [
       heading: "Give epinephrine NOW — first-line, do not delay",
       items: [
         "**Epinephrine is the ONLY first-line drug and the only one that reduces mortality** — give immediately, before antihistamines/steroids/labs",
-        "Epinephrine `0.3-0.5 mg (0.01 mg/kg, max 0.5 mg) IM` into the **anterolateral thigh (vastus lateralis)**; repeat **q5-15 min** as needed",
+        "Epinephrine `0.3-0.5 mg` (`0.01 mg/kg`, max `0.5 mg`) IM into the **anterolateral thigh (vastus lateralis)**; repeat **q5-15 min** as needed",
         "Peds: `Epinephrine 0.01 mg/kg IM` (max single dose `0.3 mg`); autoinjector `0.15 mg` for `<25-30 kg`, `0.3 mg` for `>=25-30 kg`",
         "**IM, NOT SC or IV-push** — SC absorption is erratic; IV push of `1:1000` concentration causes myocardial ischemia, arrhythmia, death",
         "**Delayed epinephrine is the leading cause of fatal anaphylaxis** — when in doubt, give it",
@@ -10402,7 +10402,7 @@ export const DIAGNOSES = [
     {
       heading: "Antibiotics (broad, immediate)",
       items: [
-        "**`Piperacillin-tazobactam 4.5 g IV q6-8h`** (or a carbapenem) for gram-negatives/anaerobes",
+        "**Piperacillin-tazobactam `4.5 g IV q6-8h`** (or a carbapenem) for gram-negatives/anaerobes",
         "**PLUS `Vancomycin 15-20 mg/kg IV`** for MRSA coverage",
         "**PLUS `Clindamycin 900 mg IV q8h`** — adds anti-toxin / antitoxigenic effect (suppresses exotoxin production), important in necrotizing infection",
         "Polymicrobial in most cases (mixed aerobes + anaerobes); narrow later based on operative cultures",
@@ -10498,7 +10498,7 @@ export const DIAGNOSES = [
       heading: "Decompression technique",
       items: [
         "**Needle decompression with a long large-bore angiocath (`14 G, >=5 cm`)** — standard catheters often too short to reach the pleura in adults",
-        "**Site options**: `2nd intercostal space, midclavicular line` OR `4th-5th ICS, anterior/mid-axillary line`",
+        "**Site options**: `2nd intercostal space`, midclavicular line OR `4th-5th ICS`, anterior/mid-axillary line",
         "**The lateral (`4th-5th ICS, axillary`) site is now preferred in adults** — thinner chest wall, higher success, fewer failures than the anterior site",
         "Insert just **above the rib** (neurovascular bundle runs below each rib); a rush of air confirms it",
         "**Needle decompression is temporizing only -> definitive `chest tube (tube thoracostomy)` must follow**",
