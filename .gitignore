@@ -29,7 +29,7 @@ dist-ssr
 *.env
 *service-account*.json
 *-service-account.json
-firebase-adminsdk*.json
+*firebase-adminsdk*.json
 secrets/
 
 # Machine-local Claude Code permissions (*.local does not match a .json suffix)
