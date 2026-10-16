@@ -92,13 +92,15 @@ const TRAILING_ZERO = /(?<![\d.])\d+\.0+(?!\d)(?:\s*[–-]\s*\d+(?:\.\d+)?)?\s*(
 // dose, and is left alone: "CK >100,000 IU/L", "HBV DNA 2,000 IU/mL", "TSH
 // µIU/mL", "anti-Xa 0.3–0.7 U/mL". A dose per kilogram, per unit time, or on
 // its own is checked. Bare "MS" is not: in this content it would be a
-// diagnosis (multiple sclerosis, mitral stenosis), never morphine.
-const PER_VOLUME = String.raw`(?!\s*\/\s*(?:dl|l|ml)(?![a-z]))`;
+// diagnosis (multiple sclerosis, mitral stenosis), never morphine. Known limit:
+// a drug concentration per volume ("1 U/mL") passes as if it were a lab value,
+// which is why this content writes concentrations as "units/mL".
+const PER_VOLUME = String.raw`(?!\s*\/\s*(?:dl|l|ml|µl|μl|ul)(?![a-z]))`;
 const DO_NOT_USE = [
-  [new RegExp(String.raw`(?:\bIU\b|\bI\.\s?U\.)${PER_VOLUME}`, "i"), `"IU" — write "units"; IU is misread as IV or 10`],
-  [new RegExp(String.raw`(?<![\w.])\d[\d,.]*\s*U\b(?!\s*waves?\b)${PER_VOLUME}|\bU\s*\/\s*(?:kg|h|hr|min|day|d|dose|24\s*h)\b`, "i"), `"U" for units — write "units"; U is misread as 0 or 4`],
+  [new RegExp(String.raw`(?<![a-z])(?:IUs?\b|I\.\s?U\.)${PER_VOLUME}`, "i"), `"IU" — write "units"; IU is misread as IV or 10`],
+  [new RegExp(String.raw`(?<![\w.])\d[\d,.]*\s*U\b(?![\s\-–]*waves?\b)${PER_VOLUME}|\bU\s*\/\s*(?:kg|h|hrs?|hours?|mins?|minutes?|days?|d|doses?|24\s*h)\b`, "i"), `"U" for units — write "units"; U is misread as 0 or 4`],
   [/\bq(?:\.\s?)?o(?:\.\s?)?d\b/i, `"qod" — write "every other day"; it is misread as "qd" or "qid"`],
-  [/\bq(?:\.\s?)?d\b|\bq\.?\s?day\b/i, `"qd" — write "daily"; it is misread as "qid"`],
+  [/\bq(?:\.\s?)?d\b(?!\.?\s?s\b)|\bq\.?\s?day\b/i, `"qd" — write "daily"; it is misread as "qid"`],
   [/\b(?:M|Mg)\s?SO\s?[4₄](?!\w)/i, `"MgSO4"/"MSO4" — write "magnesium sulfate" or "morphine sulfate"; each is mistaken for the other`],
 ];
 
@@ -281,6 +283,18 @@ const SELF_TEST = [
   ["Aspirin 81 mg q.day", 0, 1],
   ["Mg SO4 2 g IV", 0, 1],
   ["MgSO 4 2 g IV", 0, 1],
+  // ...and by its review of the second version:
+  ["Activity 2 U/µL", 0, 0],
+  ["10,000 IUs of vitamin D", 0, 1],
+  ["Prominent 1–2 U-waves", 0, 0],
+  ["Titrate in U/hour", 0, 1],
+  // ...and by the 2026-10-16 Codex review of the third:
+  ["Vitamin D 800IU daily", 0, 1],
+  ["Calcitonin 4IU/kg", 0, 1],
+  ["Titrate in U/hours", 0, 1],
+  ["Titrate in U/minutes", 0, 1],
+  ["Prominent 1–2 U–waves", 0, 0],
+  ["Give medication q.d.s.", 0, 0],
 ];
 for (const [text, wantChecks, wantProblems] of SELF_TEST) {
   const { checked, problems } = checkText(text);
