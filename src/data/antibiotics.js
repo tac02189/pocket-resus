@@ -1731,7 +1731,7 @@ export const ANTIBIOTICS = [
     indication: "Bite or significant exposure to rabies-suspect animal (bat, raccoon, skunk, fox, coyote) or unknown dog/cat in endemic area",
     firstLine: [
       { name: "Rabies vaccine (HDCV or PCEC)", dose: "1 mL IM days 0, 3, 7, 14 (and day 28 if immunocompromised)", pedsDose: "Same volume — 1 mL IM" },
-      { name: "Rabies Immune Globulin (HRIG)", dose: "20 IU/kg infiltrated around wound + remainder IM (different site from vaccine)" },
+      { name: "Rabies Immune Globulin (HRIG)", dose: "20 units/kg infiltrated around wound + remainder IM (different site from vaccine)" },
     ],
     duration: "4 doses over 14 days (5 doses if immunocompromised)",
     pearls: [
@@ -3573,7 +3573,7 @@ export const ANTIBIOTICS = [
     category: "parasitic",
     indication: "Naegleria fowleri PAM — fulminant meningoencephalitis after warm freshwater nasal exposure",
     firstLine: [
-      { name: "Amphotericin B (IV + intrathecal)", dose: "1.5 mg/kg/day IV ×3 days then 1 mg/kg/day; IT 1.5 mg q24h then qod" },
+      { name: "Amphotericin B (IV + intrathecal)", dose: "1.5 mg/kg/day IV ×3 days then 1 mg/kg/day; IT 1.5 mg q24h ×2 days, then 1 mg every other day ×8 days" },
       { name: "Miltefosine", dose: "50 mg PO TID (≥45 kg) or 2.5 mg/kg/day div BID (peds) × 28 days" },
       { name: "Add: Rifampin, Fluconazole, Azithromycin, Dexamethasone", note: "CDC-recommended combination protocol" },
     ],
@@ -4384,7 +4384,7 @@ export const ANTIBIOTICS = [
     indication: "Paramyxovirus — fever + cough/coryza/conjunctivitis (the 3 C's) + Koplik spots, followed by cephalocaudal maculopapular rash",
     firstLine: [
       { name: "Supportive care", dose: "Antipyretics, hydration, treat complications", note: "No specific antiviral therapy exists" },
-      { name: "Vitamin A", dose: "Age-based PO daily × 2 days: <6 mo 50,000 IU; 6–11 mo 100,000 IU; ≥12 mo 200,000 IU", note: "Reduces morbidity and mortality; repeat dose at 4–6 weeks if clinical vitamin A deficiency" },
+      { name: "Vitamin A", dose: "Age-based PO daily × 2 days: <6 mo 50,000 units; 6–11 mo 100,000 units; ≥12 mo 200,000 units", note: "Reduces morbidity and mortality; repeat dose at 4–6 weeks if clinical vitamin A deficiency" },
     ],
     alternatives: [
       { name: "MMR vaccine (post-exposure)", dose: "Within 72 h of exposure", note: "For susceptible immunocompetent contacts ≥6 mo" },

@@ -62,6 +62,15 @@ const CASES = [
     'color: "#fca5a5" }', 'color: "red" }', "six-digit hex"],
   ["non-string subtitle (crashes search)", "src/data/diagnoses.js",
     'subtitle: "Elevated serum potassium / cardiac emergency"', "subtitle: 42", "subtitle must be"],
+  // The rest of the Joint Commission "Do Not Use" list, gated 2026-10-16:
+  ["IU for units", "src/data/diagnoses.js",
+    "`Calcitonin 4 units/kg IM/SC q12h`", "`Calcitonin 4 IU/kg IM/SC q12h`", '"IU"'],
+  ["U for units", "src/data/drips.js",
+    'start: "0.03 units/min"', 'start: "0.03 U/min"', '"U" for units'],
+  ["qod for every other day", "src/data/diagnoses.js",
+    "`1 mg every other day ×8 days`", "`1 mg qod ×8 days`", '"qod"'],
+  ["MgSO4 for magnesium sulfate", "src/data/diagnoses.js",
+    "magnesium sulfate `2 g IV over 15 min`", "`MgSO₄ 2 g IV over 15 min`", '"MgSO4"'],
 ];
 
 const work = fs.mkdtempSync(path.join(os.tmpdir(), "pocket-resus-validate-"));

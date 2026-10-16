@@ -4,8 +4,8 @@
 //
 // It checks only what is mechanically checkable: that the data will render the
 // way it was written, that every concentration it states is arithmetically
-// true, and that no dose uses notation known to cause tenfold misreads. It
-// cannot tell whether a dose, cutoff or preparation is clinically right.
+// true, and that no dose uses notation on the Joint Commission "Do Not Use"
+// list. It cannot tell whether a dose, cutoff or preparation is clinically right.
 // Correct arithmetic on a wrongly entered ingredient is still wrong, so a
 // passing run is never evidence that clinical content is safe.
 //
@@ -87,6 +87,20 @@ const ANY_VOLUME = /\d[\d,.]*\s*(?:ml|l)(?![a-z])/i;
 // alone; an amount ("1.0 mg", "1.00 mg", "1.0–2 mg", "1.0 mg/kg") is not.
 const NAKED_DECIMAL = /(?<![\w.])\.\d/;
 const TRAILING_ZERO = /(?<![\d.])\d+\.0+(?!\d)(?:\s*[–-]\s*\d+(?:\.\d+)?)?\s*(?:mcg|µg|ng|mg|meq|mmol|units?|g|ml|l)(?![a-z])(?!\s*\/\s*(?:ml|dl|l)(?![a-z]))/i;
+// The list's abbreviations, each misread as another drug, frequency or number.
+// As with trailing zeros, a value per volume is a lab's reporting unit, not a
+// dose, and is left alone: "CK >100,000 IU/L", "HBV DNA 2,000 IU/mL", "TSH
+// µIU/mL", "anti-Xa 0.3–0.7 U/mL". A dose per kilogram, per unit time, or on
+// its own is checked. Bare "MS" is not: in this content it would be a
+// diagnosis (multiple sclerosis, mitral stenosis), never morphine.
+const PER_VOLUME = String.raw`(?!\s*\/\s*(?:dl|l|ml)(?![a-z]))`;
+const DO_NOT_USE = [
+  [new RegExp(String.raw`(?:\bIU\b|\bI\.\s?U\.)${PER_VOLUME}`, "i"), `"IU" — write "units"; IU is misread as IV or 10`],
+  [new RegExp(String.raw`(?<![\w.])\d[\d,.]*\s*U\b(?!\s*waves?\b)${PER_VOLUME}|\bU\s*\/\s*(?:kg|h|hr|min|day|d|dose|24\s*h)\b`, "i"), `"U" for units — write "units"; U is misread as 0 or 4`],
+  [/\bq(?:\.\s?)?o(?:\.\s?)?d\b/i, `"qod" — write "every other day"; it is misread as "qd" or "qid"`],
+  [/\bq(?:\.\s?)?d\b|\bq\.?\s?day\b/i, `"qd" — write "daily"; it is misread as "qid"`],
+  [/\b(?:M|Mg)\s?SO\s?[4₄](?!\w)/i, `"MgSO4"/"MSO4" — write "magnesium sulfate" or "morphine sulfate"; each is mistaken for the other`],
+];
 
 const num = (s) => (s === undefined ? undefined : Number(s.replace(/,/g, "")));
 const qty = (lo, hi) => (hi === undefined ? [num(lo)] : [num(lo), num(hi)]);
@@ -184,6 +198,7 @@ function checkText(raw) {
 
   if (NAKED_DECIMAL.test(text)) problems.push(`naked decimal — write a leading zero (0.5, not .5); ".5" is misread as 5`);
   if (TRAILING_ZERO.test(text)) problems.push(`trailing zero — write "1 mg", not "1.0 mg"; "1.0" is misread as 10`);
+  for (const [re, why] of DO_NOT_USE) if (re.test(text)) problems.push(why);
 
   return { checked, uninterpreted, problems };
 }
@@ -239,6 +254,33 @@ const SELF_TEST = [
   ["Give 0.5 mg IV, then 10 mg IV (v2.8.1)", 0, 0],
   ["**Level >4.0 mEq/L** in acute poisoning", 0, 0],             // a lab value: the trailing zero reports precision
   ["Narrow therapeutic index: 0.5–2.0 ng/mL", 0, 0],
+  ["`Calcitonin 4 IU/kg IM/SC q12h`", 0, 1],
+  ["Vitamin D 800 IU daily", 0, 1],
+  ["CK elevation can be massive (>100,000 IU/L)", 0, 0],           // lab reporting units, not doses
+  ["Discriminatory zone (β-hCG ~1500–3500 mIU/mL)", 0, 0],
+  ["Regular insulin 10 U IV", 0, 1],
+  ["Heparin 18 u/kg/hr", 0, 1],
+  ["Lipase >3x ULN (>180 U/L)", 0, 0],
+  ["Hypokalemia: flattened T waves, prominent U waves", 0, 0],
+  ["IT `1 mg qod ×8 days`", 0, 1],
+  ["Then 1 mg q.o.d.", 0, 1],
+  ["Aspirin 81 mg QD", 0, 1],
+  ["IT 1.5 mg q24h ×2 days, then 1 mg every other day ×8 days", 0, 0],
+  ["`MgSO₄ 2 g IV over 15 min`", 0, 1],
+  ["MSO4 4 mg IV", 0, 1],
+  ["QRS >120 ms; QTc >500 ms", 0, 0],
+  // Holes found by the 2026-10-16 Gemini review of the first version:
+  ["HBV DNA >2,000 IU/mL", 0, 0],                                  // per volume: a lab's reporting unit
+  ["TSH 0.4–4 µIU/mL", 0, 0],
+  ["Anti-Xa goal 0.3–0.7 U/mL", 0, 0],
+  ["Fasting insulin 2–20 µU/mL", 0, 0],
+  ["1–2 U waves after the T wave", 0, 0],
+  ["Vitamin D 800 I.U. daily", 0, 1],
+  ["Titrate in U/day", 0, 1],
+  ["Then 1 mg q. o. d.", 0, 1],
+  ["Aspirin 81 mg q.day", 0, 1],
+  ["Mg SO4 2 g IV", 0, 1],
+  ["MgSO 4 2 g IV", 0, 1],
 ];
 for (const [text, wantChecks, wantProblems] of SELF_TEST) {
   const { checked, problems } = checkText(text);

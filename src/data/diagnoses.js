@@ -124,7 +124,7 @@ export const DIAGNOSES = [
           "**Hyperkalemia** — do NOT give calcium (may worsen stone heart); give `sodium bicarb`, `insulin/dextrose`, `kayexalate`; dialysis if refractory",
           "**Bradycardia/heart block** — `Atropine 0.5–1 mg IV`; temporary pacing if needed (use lowest threshold to avoid triggering VF)",
           "**Ventricular arrhythmia** — `Lidocaine 1–1.5 mg/kg IV`; phenytoin historical alternative",
-          "**Hypomagnesemia** — `MgSO₄ 2 g IV over 15 min`",
+          "**Hypomagnesemia** — magnesium sulfate `2 g IV over 15 min`",
         ],
       },
       {
@@ -447,7 +447,7 @@ export const DIAGNOSES = [
         heading: "Systemic toxicity treatment",
         items: [
           "12-lead ECG and cardiac monitoring — fluoride causes fatal arrhythmias (QT prolongation, VF)",
-          "**Hypomagnesemia** — `MgSO₄ 2 g IV`; fluoride chelates Mg2+",
+          "**Hypomagnesemia** — magnesium sulfate `2 g IV`; fluoride chelates Mg2+",
           "**Hypocalcemia** — continuous calcium infusion; goal iCa2+ normal",
           "**Hypokalemia** — aggressive replacement",
           "Hemodialysis for severe systemic toxicity (removes fluoride)",
@@ -1871,7 +1871,7 @@ export const DIAGNOSES = [
         heading: "Eclampsia (seizures)",
         items: [
           "**Magnesium sulfate** — `4–6 g IV` over `15–20 min` loading dose, then `2 g/hr infusion`",
-          "Refractory seizures: `MgSO₄ 2 g IV bolus` repeat; then lorazepam or diazepam; monitor for Mg toxicity",
+          "Refractory seizures: magnesium sulfate `2 g IV bolus` repeat; then lorazepam or diazepam; monitor for Mg toxicity",
           "Magnesium toxicity: loss of DTRs (first sign), respiratory depression, cardiac arrest — treat with `Calcium gluconate 1 g IV`",
           "Lateral decubitus positioning; supplemental O₂; prepare for emergency delivery",
         ],
@@ -3072,10 +3072,10 @@ export const DIAGNOSES = [
       {
         heading: "2. Calcitonin (rapid onset — hours)",
         items: [
-          "`Calcitonin 4 IU/kg IM/SC q12h` (can escalate to 8 IU/kg q6h)",
+          "`Calcitonin 4 units/kg IM/SC q12h` (can escalate to 8 units/kg q6h)",
           "Onset 4–6 h; lowers Ca 1–2 mg/dL",
           "**Tachyphylaxis in 48–72 h** — bridge to bisphosphonate, not standalone",
-          "Test dose 1 IU SC first if allergy concern (salmon-derived)",
+          "Test dose 1 unit SC first if allergy concern (salmon-derived)",
         ],
       },
       {
@@ -4289,7 +4289,7 @@ export const DIAGNOSES = [
       {
         heading: "Drugs & doses (PEP — previously unvaccinated)",
         items: [
-          "**Human rabies immune globulin (HRIG)** — `20 IU/kg`; infiltrate **as much as possible AROUND wound**, remainder IM at site distant from vaccine",
+          "**Human rabies immune globulin (HRIG)** — `20 units/kg`; infiltrate **as much as possible AROUND wound**, remainder IM at site distant from vaccine",
           "**Rabies vaccine (HDCV or PCEC)** — `1 mL IM` (deltoid; anterolateral thigh in young children) on **days 0, 3, 7, 14**",
           "Immunocompromised: add 5th dose on day 28",
           "Previously vaccinated: vaccine days 0 and 3 only; **NO HRIG**",
@@ -4376,7 +4376,7 @@ export const DIAGNOSES = [
       {
         heading: "Drugs & doses (CDC combination protocol)",
         items: [
-          "**Amphotericin B** — `1.5 mg/kg/day IV ×3 days`, then `1 mg/kg/day` + intrathecal `1.5 mg q24h ×2 days`, then `1 mg qod ×8 days`",
+          "**Amphotericin B** — `1.5 mg/kg/day IV ×3 days`, then `1 mg/kg/day` + intrathecal `1.5 mg q24h ×2 days`, then `1 mg every other day ×8 days`",
           "**Miltefosine** — `50 mg PO TID` (≥45 kg) or `2.5 mg/kg/day div BID` (peds) × 28 days",
           "**Rifampin** `10 mg/kg/day IV/PO` + **Fluconazole** `10 mg/kg/day IV/PO` + **Azithromycin** `10 mg/kg/day IV/PO`",
           "**Dexamethasone** `0.6 mg/kg/day IV div q6h` for cerebral edema",
@@ -4721,7 +4721,7 @@ export const DIAGNOSES = [
         items: [
           "**Icatibant** (Firazyr) — `30 mg SQ ×1`; bradykinin B2 antagonist; can repeat at 6h",
           "**Ecallantide** (Kalbitor) — `30 mg SQ` (3 × 10 mg injections); plasma kallikrein inhibitor",
-          "**C1 esterase inhibitor concentrate** (Berinert/Cinryze) — `20 IU/kg IV`; replaces deficient C1-INH",
+          "**C1 esterase inhibitor concentrate** (Berinert/Cinryze) — `20 units/kg IV`; replaces deficient C1-INH",
           "**FFP** `2–4 units` — alternative if specific agents unavailable (contains C1-INH); paradoxical worsening rare",
           "**Tranexamic acid** `1 g IV` — limited adjunct evidence",
         ],
@@ -5110,7 +5110,7 @@ export const DIAGNOSES = [
           "`Prednisone 12.5–25 mg PO daily` — start low; most respond within 24–72 h",
           "If concomitant GCA suspected: `Prednisone 40–60 mg PO daily` (or methylprednisolone `1 g IV × 3 days` for vision threat)",
           "Symptoms should improve dramatically — if not, reconsider diagnosis",
-          "Calcium 1200 mg + vitamin D 800 IU daily; consider bisphosphonate prophylaxis (long-course steroids)",
+          "Calcium 1200 mg + vitamin D 800 units daily; consider bisphosphonate prophylaxis (long-course steroids)",
           "PPI for GI prophylaxis if NSAID co-use or high risk",
         ],
       },
