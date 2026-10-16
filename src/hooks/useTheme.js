@@ -1,7 +1,12 @@
-import { useCallback, useEffect, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
 
 const KEY = "pocket-resus:theme";
 const LEGACY_KEY = "em-critical-dx:theme";
+
+// Kept out of App.jsx: Vite's fast refresh needs a component file to export
+// only components.
+export const ThemeContext = createContext({ theme: "dark", toggle: () => {} });
+export const useThemeCtx = () => useContext(ThemeContext);
 
 function read() {
   try {
@@ -27,7 +32,9 @@ export function useTheme() {
     document.documentElement.setAttribute("data-theme", theme);
     try {
       localStorage.setItem(KEY, theme);
-    } catch {}
+    } catch {
+      // Ignore quota or privacy-mode errors.
+    }
   }, [theme]);
 
   const toggle = useCallback(() => {

@@ -1,4 +1,3 @@
-import { createContext, useContext } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Home from "./pages/Home";
@@ -8,10 +7,7 @@ import Antibiotics from "./pages/Antibiotics";
 import AntibioticPage from "./pages/AntibioticPage";
 import ContinuousDrips from "./pages/ContinuousDrips";
 import DripPage from "./pages/DripPage";
-import { useTheme } from "./hooks/useTheme";
-
-export const ThemeContext = createContext({ theme: "dark", toggle: () => {} });
-export const useThemeCtx = () => useContext(ThemeContext);
+import { ThemeContext, useTheme } from "./hooks/useTheme";
 
 const pageVariants = {
   initial: { opacity: 0, x: 30 },

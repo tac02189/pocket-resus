@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { AlertTriangle, Pill, Droplets, Syringe, Wind } from "lucide-react";
 import { Sun, Moon } from "lucide-react";
-import { useThemeCtx } from "../App";
+import { useThemeCtx } from "../hooks/useTheme";
 
 const SECTIONS = [
   {

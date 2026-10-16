@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Sun, Moon } from "lucide-react";
 import { motion } from "framer-motion";
-import { useThemeCtx } from "../App";
+import { useThemeCtx } from "../hooks/useTheme";
 
 export default function Header({ title, subtitle, showBack = false }) {
   const navigate = useNavigate();

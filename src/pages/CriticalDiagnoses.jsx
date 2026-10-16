@@ -23,13 +23,17 @@ export default function CriticalDiagnoses() {
   const [collapsedCats, setCollapsedCats] = useState(
     () => saved?.collapsedCats ?? new Set(SORTED_CATEGORIES.map((c) => c.id))
   );
-  const [didInit, setDidInit] = useState(!!saved);
 
-  // Auto-expand everything when filters/search are active (skip on cache restore)
-  useEffect(() => {
-    if (!didInit) { setDidInit(true); return; }
-    if (query.trim() || activeCat || starsOnly) setCollapsedCats(new Set());
-  }, [query, activeCat, starsOnly]);
+  // Searching or filtering expands every category so no match sits behind a
+  // collapsed header. Done here, not in an effect, so a list restored from the
+  // cache keeps the categories the reader collapsed.
+  function changeFilters(nextQuery, nextCat, nextStars) {
+    if (nextQuery === query && nextCat === activeCat && nextStars === starsOnly) return;
+    setQuery(nextQuery);
+    setActiveCat(nextCat);
+    setStarsOnly(nextStars);
+    if (nextQuery.trim() || nextCat || nextStars) setCollapsedCats(new Set());
+  }
 
   useEffect(() => {
     writeCache(CACHE_KEY, { query, activeCat, starsOnly, collapsedCats });
@@ -38,7 +42,7 @@ export default function CriticalDiagnoses() {
   const scrollRef = useRef(saved?.scrollY ?? 0);
 
   useLayoutEffect(() => {
-    if (saved?.scrollY) window.scrollTo(0, saved.scrollY);
+    if (scrollRef.current) window.scrollTo(0, scrollRef.current);
   }, []);
 
   useEffect(() => {
@@ -100,13 +104,13 @@ export default function CriticalDiagnoses() {
           <Search size={14} className="shrink-0" style={{ color: "var(--text-faint)" }} />
           <input
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => changeFilters(e.target.value, activeCat, starsOnly)}
             placeholder="Search diagnoses…"
             className="flex-1 bg-transparent outline-none"
             style={{ fontSize: 16, color: "var(--text-primary)", caretColor: "#F1B82D" }}
           />
           {query && (
-            <button onClick={() => setQuery("")} style={{ color: "var(--text-faint)" }}>
+            <button onClick={() => changeFilters("", activeCat, starsOnly)} style={{ color: "var(--text-faint)" }}>
               <X size={13} />
             </button>
           )}
@@ -116,7 +120,7 @@ export default function CriticalDiagnoses() {
         <div className="flex items-center gap-1.5 overflow-x-auto pb-0.5" style={{ scrollbarWidth: "none" }}>
           {/* Stars */}
           <button
-            onClick={() => { setStarsOnly((v) => !v); setActiveCat(null); }}
+            onClick={() => changeFilters(query, null, !starsOnly)}
             className="shrink-0 flex items-center gap-1 px-2.5 py-1 rounded-full font-semibold transition-all"
             style={{
               fontSize: 11,
@@ -131,7 +135,7 @@ export default function CriticalDiagnoses() {
 
           {/* All */}
           <button
-            onClick={() => { setActiveCat(null); setStarsOnly(false); }}
+            onClick={() => changeFilters(query, null, false)}
             className="shrink-0 px-2.5 py-1 rounded-full font-semibold transition-all"
             style={{
               fontSize: 11,
@@ -148,7 +152,7 @@ export default function CriticalDiagnoses() {
             return (
               <button
                 key={c.id}
-                onClick={() => { setActiveCat(active ? null : c.id); setStarsOnly(false); }}
+                onClick={() => changeFilters(query, active ? null : c.id, false)}
                 className="shrink-0 px-2.5 py-1 rounded-full font-semibold transition-all"
                 style={{
                   fontSize: 11,
