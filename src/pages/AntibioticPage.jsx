@@ -2,6 +2,7 @@ import { useLayoutEffect } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import { ANTIBIOTICS, ANTIBIOTIC_CATEGORIES } from "../data/antibiotics";
+import Footer from "../components/Footer";
 
 const CATEGORY_BY_ID = Object.fromEntries(
   ANTIBIOTIC_CATEGORIES.map((c) => [c.id, c])
@@ -97,16 +98,7 @@ export default function AntibioticPage() {
         )}
       </div>
 
-      <div
-        className="px-4 py-3 text-center text-xs"
-        style={{
-          color: "var(--text-dim)",
-          borderTop: "1px solid var(--border-subtle)",
-          paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom, 0px))",
-        }}
-      >
-        For educational use only — verify all doses before clinical application.
-      </div>
+      <Footer />
     </div>
   );
 }

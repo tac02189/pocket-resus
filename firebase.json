@@ -5,7 +5,7 @@
       "public": "dist",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
-        { "source": "**", "destination": "/index.html" }
+        { "regex": "^/[^.]*$", "destination": "/index.html" }
       ],
       "headers": [
         {
@@ -33,7 +33,7 @@
       "public": "dist",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
-        { "source": "**", "destination": "/index.html" }
+        { "regex": "^/[^.]*$", "destination": "/index.html" }
       ],
       "headers": [
         {

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AlertTriangle, Pill, Droplets, Syringe, Wind } from "lucide-react";
 import { Sun, Moon } from "lucide-react";
 import { useThemeCtx } from "../hooks/useTheme";
+import Footer from "../components/Footer";
 
 const SECTIONS = [
   {
@@ -173,16 +174,7 @@ export default function Home() {
         ))}
       </div>
 
-      <div
-        className="px-4 py-3 text-center text-xs"
-        style={{
-          color: "var(--text-dim)",
-          borderTop: "1px solid var(--border-subtle)",
-          paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom, 0px))",
-        }}
-      >
-        For educational use only — verify all doses before clinical application.
-      </div>
+      <Footer />
     </div>
   );
 }

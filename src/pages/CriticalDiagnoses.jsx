@@ -7,6 +7,7 @@ import { DIAGNOSES } from "../data/diagnoses";
 import { CATEGORIES } from "../data/categories";
 import { useStarred } from "../hooks/useStarred";
 import { readCache, writeCache } from "../lib/listCache";
+import Footer from "../components/Footer";
 
 const SORTED_CATEGORIES = [...CATEGORIES].sort((a, b) =>
   a.label.localeCompare(b.label)
@@ -256,12 +257,7 @@ export default function CriticalDiagnoses() {
         </AnimatePresence>
       </div>
 
-      <div
-        className="px-4 py-3 text-center text-xs"
-        style={{ color: "var(--text-dim)", borderTop: "1px solid var(--border-subtle)", paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom, 0px))" }}
-      >
-        For educational use only — verify all doses before clinical application.
-      </div>
+      <Footer />
     </div>
   );
 }

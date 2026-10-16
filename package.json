@@ -11,6 +11,7 @@
     "build:firebase": "npm run validate && cross-env DEPLOY_TARGET=firebase vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "preview:firebase": "cross-env DEPLOY_TARGET=firebase vite preview --port 4174 --strictPort",
     "deploy": "npm run deploy:firebase",
     "deploy:firebase": "npm run build:firebase && firebase deploy --only hosting"
   },
@@ -36,6 +37,7 @@
     "postcss": "^8.5.13",
     "sharp": "^0.34.5",
     "tailwindcss": "^3.4.19",
-    "vite": "^8.0.10"
+    "vite": "^8.0.10",
+    "vite-plugin-pwa": "^2.0.0"
   }
 }
