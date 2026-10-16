@@ -3365,7 +3365,7 @@ export const ANTIBIOTICS = [
     category: "parasitic",
     indication: "Toxoplasmic encephalitis (HIV/CD4 <100), congenital, ocular, or severe immunocompromise",
     firstLine: [
-      { name: "Pyrimethamine + Sulfadiazine + Leucovorin", dose: "Pyr 200 mg PO ×1 then 50–75 mg daily; Sulfa 1.0–1.5g PO QID; Leuco 10–25 mg PO daily" },
+      { name: "Pyrimethamine + Sulfadiazine + Leucovorin", dose: "Pyr 200 mg PO ×1 then 50–75 mg daily; Sulfa 1–1.5g PO QID; Leuco 10–25 mg PO daily" },
     ],
     alternatives: [
       { name: "TMP-SMX", dose: "5 mg/kg TMP IV/PO BID", note: "Equivalent in CNS toxo; preferred when pyrimethamine unavailable" },
