@@ -51,7 +51,7 @@ const CASES = [
   ["lowercase units with wrong arithmetic", "src/data/drips.js",
     "8 mg/250 mL NS = 32 mcg/mL", "8 mg/250 ml NS = 32 mg/ml", "norepinephrine"],
   ["equation in a form the checker cannot read", "src/data/drips.js",
-    "4 mg/250 mL NS = 16 mcg/mL", "4 mg in 250 mL NS = 16 mcg/mL", "cannot read"],
+    "4 mg/250 mL NS = 16 mcg/mL", "4 mg in 250 mL NS = 16 mcg/mL", "not checked against"],
   ["naked decimal", "src/data/drips.js",
     "= 0.2 units/mL", "= .2 units/mL", "naked decimal"],
   ["trailing zero on a dose", "src/data/diagnoses.js",
