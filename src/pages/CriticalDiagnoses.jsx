@@ -61,7 +61,6 @@ export default function CriticalDiagnoses() {
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return DIAGNOSES.filter((dx) => {
-      if (dx.id === "anticoagulation-reversal") return false;
       if (starsOnly && !isStarred(dx.id)) return false;
       if (activeCat && dx.category !== activeCat) return false;
       if (q) return dx.name.toLowerCase().includes(q) || (dx.subtitle ?? "").toLowerCase().includes(q);
