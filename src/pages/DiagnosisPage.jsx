@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Header from "../components/Header";
@@ -7,13 +7,17 @@ import StarButton from "../components/StarButton";
 import ViewToggle from "../components/ViewToggle";
 import { DIAGNOSES } from "../data/diagnoses";
 import { CATEGORY_BY_ID } from "../data/categories";
-import { useStarred, useLastView } from "../hooks/useStarred";
+import { useStarred } from "../hooks/useStarred";
 
 export default function DiagnosisPage() {
   const { id } = useParams();
   const dx = DIAGNOSES.find((d) => d.id === id);
   const { isStarred, toggle } = useStarred();
-  const [view, setView] = useLastView();
+  // Every diagnosis opens on TLDR, and the toggle is not remembered: a card last
+  // read in Extended must not decide how the next emergency opens. It resets per
+  // diagnosis because App.jsx keys <Routes> on the pathname, which remounts this
+  // page; the scroll-to-top below relies on that too.
+  const [view, setView] = useState("tldr");
 
   // Open detail pages scrolled to the top (list pages restore their own scroll on back)
   useLayoutEffect(() => { window.scrollTo(0, 0); }, []);

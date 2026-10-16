@@ -53,34 +53,3 @@ export function useStarred() {
 
   return { starred, isStarred, toggle };
 }
-
-const TOGGLE_KEY = "pocket-resus:lastView";
-const LEGACY_TOGGLE_KEY = "em-critical-dx:lastView";
-
-export function useLastView() {
-  const [view, setView] = useState(() => {
-    try {
-      let v = localStorage.getItem(TOGGLE_KEY);
-      if (!v) {
-        const legacy = localStorage.getItem(LEGACY_TOGGLE_KEY);
-        if (legacy) {
-          localStorage.setItem(TOGGLE_KEY, legacy);
-          localStorage.removeItem(LEGACY_TOGGLE_KEY);
-          v = legacy;
-        }
-      }
-      return v || "tldr";
-    } catch {
-      return "tldr";
-    }
-  });
-  const update = useCallback((v) => {
-    setView(v);
-    try {
-      localStorage.setItem(TOGGLE_KEY, v);
-    } catch {
-      // ignore
-    }
-  }, []);
-  return [view, update];
-}
