@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Sun, Moon } from "lucide-react";
 import { motion } from "framer-motion";
@@ -7,9 +8,25 @@ export default function Header({ title, subtitle, showBack = false }) {
   const navigate = useNavigate();
   const { theme, toggle } = useThemeCtx();
   const isDark = theme === "dark";
+  const ref = useRef(null);
+
+  // Long titles wrap rather than truncate, so the header's height varies by
+  // page. Publish the measured height for the sticky bars below it (search,
+  // TLDR toggle) to sit flush underneath. A pixel value, never env() — a custom
+  // property holding env() broke standalone iOS layout before (9a4a287).
+  useLayoutEffect(() => {
+    const el = ref.current;
+    const publish = () =>
+      document.documentElement.style.setProperty("--header-h", `${el.offsetHeight}px`);
+    publish();
+    const observer = new ResizeObserver(publish);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header
+      ref={ref}
       className="sticky top-0 z-30 flex items-center gap-3 px-4 py-3"
       style={{
         background: "var(--header-bg)",
@@ -41,13 +58,13 @@ export default function Header({ title, subtitle, showBack = false }) {
       {/* Title */}
       <div className="flex-1 min-w-0">
         <p
-          className="font-display font-semibold truncate leading-tight"
+          className="font-display font-semibold break-words leading-tight"
           style={{ fontSize: showBack ? 16 : 17, color: "var(--text-primary)", letterSpacing: "0.01em" }}
         >
           {title}
         </p>
         {subtitle && (
-          <p className="mt-0.5 text-xs truncate" style={{ color: "var(--text-muted)" }}>
+          <p className="mt-0.5 text-xs break-words" style={{ color: "var(--text-muted)" }}>
             {subtitle}
           </p>
         )}

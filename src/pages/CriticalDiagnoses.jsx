@@ -90,7 +90,7 @@ export default function CriticalDiagnoses() {
       <div
         className="sticky z-20 px-3 pt-2 pb-2 flex flex-col gap-2"
         style={{
-          top: "calc(57px + env(safe-area-inset-top, 0px))",
+          top: "var(--header-h, calc(63px + env(safe-area-inset-top, 0px)))",
           background: "var(--header-bg)",
           backdropFilter: "blur(12px)",
           WebkitBackdropFilter: "blur(12px)",

@@ -64,7 +64,7 @@ export default function DiagnosisPage() {
       <div
         className="sticky z-20 flex justify-center px-4 py-3"
         style={{
-          top: "calc(57px + env(safe-area-inset-top, 0px))",
+          top: "var(--header-h, calc(63px + env(safe-area-inset-top, 0px)))",
           background: "var(--header-bg)",
           backdropFilter: "blur(12px)",
           WebkitBackdropFilter: "blur(12px)",

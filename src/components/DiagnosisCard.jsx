@@ -32,13 +32,13 @@ export default function DiagnosisCard({ dx, isStarred, onToggleStar }) {
 
       <div className="flex-1 min-w-0">
         <p
-          className="font-display font-semibold leading-tight truncate"
+          className="font-display font-semibold leading-tight break-words"
           style={{ fontSize: 15, color: "var(--text-primary)", letterSpacing: "0.01em" }}
         >
           {dx.name}
         </p>
         {dx.subtitle && (
-          <p className="leading-snug truncate" style={{ fontSize: 11, color: "var(--text-muted)" }}>
+          <p className="leading-snug break-words" style={{ fontSize: 11, color: "var(--text-muted)" }}>
             {dx.subtitle}
           </p>
         )}
