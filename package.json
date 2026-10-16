@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "build:firebase": "cross-env DEPLOY_TARGET=firebase vite build",
+    "validate": "node scripts/validate-content.mjs",
+    "test": "node scripts/validate-content.test.mjs",
+    "build": "npm run validate && vite build",
+    "build:firebase": "npm run validate && cross-env DEPLOY_TARGET=firebase vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "npm run deploy:firebase",
