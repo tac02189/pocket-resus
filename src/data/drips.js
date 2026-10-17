@@ -698,7 +698,7 @@ export const DRIPS = [
     indication: "Hyperkalemia (membrane stabilization); calcium-channel-blocker / beta-blocker overdose; symptomatic hypocalcemia; citrate toxicity from massive transfusion",
     concentration: "CaCl₂ 10% = 100 mg/mL (central line preferred, ~3× elemental Ca)  ·  Calcium gluconate 10% = 100 mg/mL (peripheral-safe, ~⅓ elemental Ca)",
     dose: {
-      start: "Severe hyperkalemia with ECG changes: 1 g CaCl₂ IV (10 mL of 10%) over 5 min or 3 g calcium gluconate IV (30 mL of 10%) over 10 min (RCUK/ERC 2025; MHRA 2023); recheck the ECG 5–10 min after the calcium and, if the changes remain, repeat the calcium dose. CCB/BB overdose: high-dose boluses then continuous infusion",
+      start: "Severe hyperkalemia with ECG changes: 1 g calcium gluconate IV (10 mL of 10%) over 5 min, or 1 g CaCl₂ IV (10 mL of 10%) over 5 min, preferably central; recheck the ECG 5–10 min after the calcium and, if the changes remain, repeat the calcium dose (MHRA 2023). CCB/BB overdose: high-dose boluses then continuous infusion",
       range: "Repeat boluses or infusion titrated to ionized calcium and clinical response",
       max: "Titrate to ionized calcium; no fixed ceiling in toxicology — limited by hypercalcemia",
       titration: "Redose hyperkalemia stabilization q30–60 min as needed; titrate infusion to ionized calcium",

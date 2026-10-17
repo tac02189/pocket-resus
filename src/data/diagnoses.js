@@ -3132,7 +3132,7 @@ export const DIAGNOSES = [
       {
         heading: "1. Cardiac membrane stabilization (ECG changes present)",
         items: [
-          "`Calcium chloride 1 g IV` (10 mL of 10%) over 5 min, preferably via a central or deep vein — RCUK/ERC 2025's rate for ECG changes, faster than the label's routine 1 mL/min — or `Calcium gluconate 3 g IV` (30 mL of 10%) over 10 min, safer through a peripheral IV (RCUK gives it when chloride is unavailable; MHRA 2023); onset 1–3 min, lasts 30–60 min",
+          "`Calcium gluconate 1 g IV` (10 mL of 10%) over 5 min, safer through a peripheral IV — it carries about a third of the calcium in 1 g of chloride — or `Calcium chloride 1 g IV` (10 mL of 10%) over 5 min, preferably via a central or deep vein (RCUK/ERC 2025's rate for ECG changes, faster than the label's maximum of 1 mL/min); onset 1–3 min, lasts 30–60 min",
           "Recheck the ECG 5–10 min after the calcium; if the changes remain, repeat the calcium dose (MHRA 2023)",
           "In cardiac arrest: calcium chloride and bicarbonate through separate lines, since they precipitate together — see In cardiac arrest from hyperkalemia, below",
           "**Does NOT lower K+** — only stabilizes cardiac membrane",
