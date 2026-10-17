@@ -1954,7 +1954,7 @@ export const DIAGNOSES = [
           "Type & crossmatch, CBC, coags, fibrinogen; **fibrinogen <200 mg/dL predicts severe PPH**",
           "Warmed crystalloid + early balanced blood products (target 1:1:1); don't over-resuscitate with crystalloid",
           "**Tranexamic acid 1 g IV over 10 min** — give within 3 h of delivery (WOMAN trial); repeat 1 g if bleeding continues after 30 min",
-          "Keep patient warm; monitor for hypothermia, acidosis, hypocalcemia (lethal triad)",
+          "Keep patient warm; monitor for hypothermia, acidosis, coagulopathy and hypocalcemia (the 'lethal diamond')",
         ],
       },
       {
@@ -2037,7 +2037,7 @@ export const DIAGNOSES = [
           "Tranexamic acid early (within 3h)",
           "Fibrinogen is the first factor to fall in obstetric hemorrhage — target >150–200 mg/dL; give cryoprecipitate or fibrinogen concentrate",
           "Calcium replacement (citrate from massive transfusion → hypocalcemia)",
-          "Avoid the lethal triad: hypothermia, acidosis, coagulopathy — warm fluids/patient",
+          "Avoid the lethal diamond — hypothermia, acidosis, coagulopathy and hypocalcemia: warm fluids and patient, replace calcium",
           "Point-of-care testing (ROTEM/TEG) if available to guide product use",
           "Cell salvage in select cases",
         ],
@@ -2063,7 +2063,7 @@ export const DIAGNOSES = [
       },
       {
         heading: "References",
-        items: ["ACOG Practice Bulletin 183 (2017, reaffirmed)", "WOMAN Trial, Lancet 2017", "Tintinalli 9e Ch 103", "RCOG Green-top Guideline 52"],
+        items: ["ACOG Practice Bulletin 183 (2017, reaffirmed)", "WOMAN Trial, Lancet 2017", "Tintinalli 9e Ch 103", "RCOG Green-top Guideline 52", "Ditzel et al, the lethal diamond (J Trauma Acute Care Surg 2020)"],
       },
     ],
   },
@@ -2606,7 +2606,7 @@ export const DIAGNOSES = [
       {
         heading: "Replace what is being consumed (bleed-predominant)",
         items: [
-          "**Low fibrinogen (<150 mg/dL) + bleeding** → `Cryoprecipitate 10 units IV` (each unit raises fibrinogen ~10 mg/dL in an adult); recheck fibrinogen 30–60 min after",
+          "**Low fibrinogen (<150 mg/dL) + bleeding** → `Cryoprecipitate 10 units IV` (AABB: 1 unit per 7–10 kg raises fibrinogen ~50–75 mg/dL — about 5–10 mg/dL per unit in an adult); recheck fibrinogen 30–60 min after",
           "**Thrombocytopenia (<50K) + bleeding** → `Platelets 1 apheresis unit` (goal >50K for active bleed, >100K for CNS bleed)",
           "**Prolonged PT/INR + bleeding** → `FFP 15–30 mL/kg IV`; also replaces fibrinogen (less efficiently than cryo)",
           "**Target fibrinogen >150–200 mg/dL** — most sensitive/specific therapeutic target",
@@ -2661,7 +2661,7 @@ export const DIAGNOSES = [
       },
       {
         heading: "References",
-        items: ["Tintinalli 9e Ch 246", "Levi & van der Poll, Semin Thromb Hemost 2010", "LITFL DIC"],
+        items: ["Tintinalli 9e Ch 246", "Levi & van der Poll, Semin Thromb Hemost 2010", "LITFL DIC", "AABB Circular of Information for the Use of Human Blood and Blood Components (June 2024)"],
       },
     ],
   },
@@ -3142,7 +3142,7 @@ export const DIAGNOSES = [
         heading: "2. Shift K+ intracellularly (onset 15–30 min)",
         items: [
           "`Regular insulin 10 units IV` + `Dextrose 25 g IV` (D50 50 mL) simultaneously — lowers K+ 0.5–1.5 mEq/L",
-          "`Albuterol 10–20 mg nebulized` (high-dose) — lowers K+ 0.5–1.0 mEq/L; additive to insulin; avoid if tachydysrhythmia",
+          "`Albuterol 10–20 mg nebulized` (high-dose) — lowers K+ 0.5–1 mEq/L; additive to insulin; avoid if tachydysrhythmia; **not during cardiac arrest** (AHA 2025)",
           "Sodium bicarbonate `150 mEq` in `1L D5W` — most effective if concomitant metabolic acidosis; less effective in ESRD",
         ],
       },
@@ -3155,9 +3155,18 @@ export const DIAGNOSES = [
         ],
       },
       {
+        heading: "In cardiac arrest from hyperkalemia",
+        items: [
+          "`Calcium chloride 1 g IV` (10 mL of 10%) **and** `Sodium bicarbonate 50 mEq IV` — through separate lines, or flush between (RCUK/ERC 2025)",
+          "`Dextrose 50 g IV` bolus (D50 100 mL) + `Regular insulin 10 units IV` over 15–30 min — AHA 2025 arrest doses; peds `D10W 5 mL/kg IV` bolus + `Regular insulin 0.1 units/kg IV` (max 10 units) over 15–30 min",
+          "AHA 2025: benefit of calcium, bicarbonate and insulin–glucose in arrest is **not well established** (2b) · **no nebulized albuterol during CPR** (no benefit)",
+          "Refractory: dialysis; consider ECPR per local protocol (RCUK/ERC 2025)",
+        ],
+      },
+      {
         heading: "Intubation note",
         items: [
-          "**Avoid succinylcholine** — depolarization releases ~0.5–1.0 mEq/L K+; potentially fatal in hyperkalemia",
+          "**Avoid succinylcholine** — depolarization releases ~0.5–1 mEq/L K+; potentially fatal in hyperkalemia",
           "Use `Rocuronium 1.2 mg/kg IV` for RSI",
         ],
       },
@@ -3205,7 +3214,7 @@ export const DIAGNOSES = [
       },
       {
         heading: "References",
-        items: ["Tintinalli 9e Ch 20", "Elliott et al, BMJ 2010", "Rafique, J Intensive Care Med 2018", "LITFL Hyperkalemia"],
+        items: ["Tintinalli 9e Ch 20", "Elliott et al, BMJ 2010", "Rafique, J Intensive Care Med 2018", "LITFL Hyperkalemia", "AHA 2025 Guidelines, Part 10: Special Circumstances (hyperkalemia, Table 3)", "RCUK 2025 Special Circumstances guideline (ERC 2025)"],
       },
     ],
   },
@@ -3445,10 +3454,10 @@ export const DIAGNOSES = [
       {
         heading: "Cardiac arrest management",
         items: [
-          "Start CPR; attempt defibrillation for VF × 1–3 times — may be ineffective below 30°C; **do not repeat shocks** until core temp >30°C",
-          "**Epinephrine**: withhold if core temp <30°C (drug accumulates → toxic upon rewarming); reduce dosing frequency if 30–35°C",
+          "Start CPR; **defibrillate VF once** (AHA 2025, 2b; ERC 2025 allows up to 3) — if it fails, **no further shocks** until core temp ≥30°C; the cold heart responds poorly to shocks",
+          "**Epinephrine**: withhold until core temp ≥30°C (drug accumulates → toxic upon rewarming), then at 30–35°C give it every 6–10 min (ERC 2025; not if ECPR is about to start)",
           "Target rewarming to >32°C before declaring resuscitation failed",
-          "**K+ >12 mEq/L** in cardiac arrest from hypothermia suggests non-survivable cell death — consider termination; K+ <12 → continue aggressive resuscitation",
+          "**Prognosis**: decide on ECLS rewarming with the **HOPE score** (AHA 2025, ERC 2025) — it outperforms K+ ≥12 mmol/L alone; a very high K+ still signals a poor prognosis",
         ],
       },
     ],
@@ -3491,7 +3500,7 @@ export const DIAGNOSES = [
       },
       {
         heading: "References",
-        items: ["Tintinalli 9e Ch 215", "Paal et al, Resuscitation 2016 (wilderness guidelines)", "LITFL Hypothermia"],
+        items: ["Tintinalli 9e Ch 215", "Paal et al, Resuscitation 2016 (wilderness guidelines)", "LITFL Hypothermia", "AHA 2025 Guidelines, Part 10: Special Circumstances (accidental hypothermia)", "RCUK 2025 Special Circumstances guideline (ERC 2025)"],
       },
     ],
   },
@@ -3924,7 +3933,7 @@ export const DIAGNOSES = [
       {
         heading: "Pulseless VT / VF → defibrillate NOW",
         items: [
-          "**Unsynchronized defibrillation** at max energy (`200 J` biphasic) + immediate CPR",
+          "**Unsynchronized defibrillation** at the manufacturer's dose (biphasic, typically `120–200 J`; if unknown, the maximum available) + immediate CPR",
           "ACLS: epinephrine 1 mg q3–5 min; **amiodarone 300 mg IV** (then 150 mg) or **lidocaine 1–1.5 mg/kg**",
           "Treat reversible causes (Hs & Ts); consider double-sequential defibrillation / refractory VF protocol",
         ],
@@ -3972,7 +3981,7 @@ export const DIAGNOSES = [
         items: [
           "Monomorphic VT (regular, pulse, unstable): synchronized, 100 J biphasic initial, escalate",
           "Polymorphic VT: irregular — defibrillator often cannot synchronize → unsynchronized (defib) doses",
-          "Pulseless VT/VF: unsynchronized max energy + ACLS",
+          "Pulseless VT/VF: unsynchronized, at the manufacturer's dose (maximum available if unknown) + ACLS — see Cardiac Arrest & Post-ROSC Care card",
           "Ensure 'sync' is re-enabled before each synchronized shock (defibrillators default back to unsync after a shock)",
           "Pre-oxygenate and sedate the conscious stable-but-for-cardioversion patient (etomidate/ketamine + analgesia)",
         ],
@@ -4006,7 +4015,7 @@ export const DIAGNOSES = [
       },
       {
         heading: "References",
-        items: ["AHA ACLS 2020", "Ortiz et al PROCAMIO, Eur Heart J 2017", "AHA/ACC/HRS VA Guideline 2017", "Tintinalli 9e Ch 18"],
+        items: ["AHA ACLS 2020", "AHA 2025 Guidelines, Part 9: Adult Advanced Life Support", "Ortiz et al PROCAMIO, Eur Heart J 2017", "AHA/ACC/HRS VA Guideline 2017", "Tintinalli 9e Ch 18"],
       },
     ],
   },
@@ -4698,7 +4707,7 @@ export const DIAGNOSES = [
       {
         heading: "Immediate actions",
         items: [
-          "**Call CDC Emergency Operations Center: `770-488-7100` (24/7)** — they coordinate miltefosine + management",
+          "**Call CDC Emergency Operations Center: `770-488-7100` (24/7)** — they coordinate miltefosine, investigational nitroxoline and management",
           "Warm freshwater nasal exposure → consider in any rapidly progressive meningoencephalitis",
           "ICU admission, neurosurg consult (ICP management)",
           "Wet mount fresh CSF — DO NOT REFRIGERATE; motile trophozoites",
@@ -4707,10 +4716,12 @@ export const DIAGNOSES = [
       {
         heading: "Drugs & doses (CDC combination protocol)",
         items: [
-          "**Amphotericin B** — `1.5 mg/kg/day IV ×3 days`, then `1 mg/kg/day` + intrathecal `1.5 mg q24h ×2 days`, then `1 mg every other day ×8 days`",
-          "**Miltefosine** — `50 mg PO TID` (≥45 kg) or `2.5 mg/kg/day div BID` (peds) × 28 days",
-          "**Rifampin** `10 mg/kg/day IV/PO` + **Fluconazole** `10 mg/kg/day IV/PO` + **Azithromycin** `10 mg/kg/day IV/PO`",
-          "**Dexamethasone** `0.6 mg/kg/day IV div q6h` for cerebral edema",
+          "**Amphotericin B deoxycholate** (conventional, not liposomal) — IV `1.5 mg/kg/day` in 2 divided doses ×3 days, then `1 mg/kg/day` once daily ×11 days (14-day course); **plus intrathecal** `1.5 mg` daily ×2 days, then `1 mg` every other day ×8 days (10-day course)",
+          "**Miltefosine** — `50 mg PO BID` under 45 kg, `50 mg PO TID` at 45 kg or more (max `2.5 mg/kg/day`) × 28 days (CDC uses the leishmaniasis label dosing)",
+          "**Azithromycin** `10 mg/kg/day IV/PO` (max `500 mg/day`) + **Rifampin** `10 mg/kg/day IV/PO` (max `600 mg/day`), once daily ×28 days",
+          "**Posaconazole** (CDC 2025) — adults `300 mg` IV or DR tablet BID ×2 doses, then `300 mg` daily; peds `6–10 mg/kg/dose` BID ×2 doses, then `6–10 mg/kg/dose` daily; 28-day course; CDC max `300 mg/day` (its loading doses exceed this — confirm with ID or pharmacy)",
+          "Posaconazole's optimal dose for PAM is unknown — dose by drug levels. CDC: choose the azole individually; posaconazole has better in vitro activity than fluconazole, which 3 of 4 US survivors received",
+          "**Dexamethasone** `0.6 mg/kg/day IV div q6h` ×4 days for cerebral edema",
           "Consider **therapeutic hypothermia** (32–34°C × 24h) — adjunct in surviving cases",
         ],
       },
@@ -4764,7 +4775,7 @@ export const DIAGNOSES = [
       },
       {
         heading: "References",
-        items: ["CDC Naegleria Treatment Recommendations", "Capewell et al, J Pediatr Infect Dis Soc 2015", "Linam et al, Pediatrics 2015 (survivor case)"],
+        items: ["CDC, Clinical Care of Naegleria fowleri Infection (Nov 20, 2025)", "Capewell et al, J Pediatr Infect Dis Soc 2015", "Linam et al, Pediatrics 2015 (survivor case)"],
       },
     ],
   },
@@ -11428,7 +11439,7 @@ export const DIAGNOSES = [
       items: [
         "**Halve the induction agent, never the paralytic**: etomidate `0.15 mg/kg` or ketamine `0.5–1 mg/kg`; rocuronium `1.2–1.6 mg/kg` total body weight (low cardiac output delays onset)",
         "**Avoid propofol** in shock; even ketamine can drop BP in the catecholamine-depleted",
-        "**Resuscitate before you intubate** — volume ± pressors first; peri-intubation arrest risk climbs with SBP <90 or shock index >0.8",
+        "**Resuscitate before you intubate** — volume ± pressors first; **in hemorrhagic shock, blood — not pressors** (see Massive Hemorrhage / MTP card); peri-intubation arrest risk climbs with SBP <90 or shock index >0.8",
         "**Push-dose epinephrine** `5–20 mcg IV q2–5 min` (0.5–2 mL of a 10 mcg/mL mix — see prep in Extended)",
         "**Push-dose phenylephrine** `50–200 mcg IV q1–5 min` (0.5–2 mL of 100 mcg/mL) — when tachycardic",
         "Post-intubation hypotension: fluids + push-dose pressor as a bridge to a **norepinephrine infusion**",
@@ -11547,6 +11558,7 @@ export const DIAGNOSES = [
         "Weingart & Levitan, Preoxygenation and Prevention of Desaturation (Ann Emerg Med 2012)",
         "EMCrit — Push-Dose Pressors",
         "PALS 2020 — pediatric airway pharmacology",
+        "Joint Trauma System CPG: Damage Control Resuscitation (2019, updated 2023)",
       ],
     },
   ],

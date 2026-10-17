@@ -68,7 +68,7 @@ const CASES = [
   ["U for units", "src/data/drips.js",
     'start: "0.03 units/min"', 'start: "0.03 U/min"', '"U" for units'],
   ["qod for every other day", "src/data/diagnoses.js",
-    "`1 mg every other day ×8 days`", "`1 mg qod ×8 days`", '"qod"'],
+    "`1 mg` every other day ×8 days", "`1 mg` qod ×8 days", '"qod"'],
   ["MgSO4 for magnesium sulfate", "src/data/diagnoses.js",
     "magnesium sulfate `2 g IV over 15 min`", "`MgSO₄ 2 g IV over 15 min`", '"MgSO4"'],
 ];
@@ -101,7 +101,8 @@ try {
   for (const [what, file, anchor, replacement, expect] of CASES) {
     fresh();
     const p = path.join(work, file);
-    const text = fs.readFileSync(p, "utf8");
+    // Anchors are written with \n; a CRLF checkout (core.autocrlf) must still match.
+    const text = fs.readFileSync(p, "utf8").replace(/\r\n/g, "\n");
     if (!text.includes(anchor)) {
       failures.push(`${what}: anchor no longer in ${file} — update this case: ${anchor}`);
       continue;
