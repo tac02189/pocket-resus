@@ -2368,7 +2368,7 @@ export const DIAGNOSES = [
           "**Plasma:platelets:RBC `1:1:1`** (PROPPR), or low-titer O whole blood where stocked — one apheresis platelet unit per `6` RBC units keeps the ratio",
           "First products: uncrossmatched O RBCs (O-neg for females of childbearing potential, under ~45–50; O-pos for others) + AB or low-titer A plasma; switch to type-specific products when the blood bank releases them",
           "**Minimize crystalloid** — `≤1 L` in initial resuscitation; only NS or Plasma-Lyte in a blood line (**never LR**); warm RBCs and plasma (platelets and cryo per blood-bank policy)",
-          "**Permissive hypotension until bleeding is controlled: SBP `80–90` (MAP `50–60`)** in adults without brain injury",
+          "**Permissive hypotension until bleeding is controlled: SBP `80–90` (MAP `50–60`)** in adults without brain injury — after ROSC, individualize: no guideline we found sets a target for a bleeding patient after cardiac arrest, and post-arrest care aims for MAP `≥65` (see Cardiac Arrest card)",
           "**TBI: SBP `≥110` (MAP `>80`)** · **Children: no permissive hypotension** — resuscitate to normal perfusion",
           "**Vasopressors are no substitute for blood** — JTS: not recommended in hemorrhagic shock; EU: norepinephrine only if restricted volume misses the BP target",
         ],
@@ -2376,7 +2376,7 @@ export const DIAGNOSES = [
       {
         heading: "TXA + calcium — give both early",
         items: [
-          "**Tranexamic acid `1 g` IV over 10 min, then `1 g` over 8 h** for bleeding trauma (SBP `<90` and/or HR `>110`, or clinical judgment) **within 3 h of injury**; a single `2 g` IV/IO dose (slow push or infusion) is an accepted prehospital alternative",
+          "**Tranexamic acid `1 g` IV over 10 min, then `1 g` over 8 h** for bleeding trauma (SBP `<90` and/or HR `>110`, or clinical judgment) **within 3 h of injury**; a single `2 g` IV/IO dose, run over 10 min in `100 mL` NS (JTS), is an accepted prehospital alternative",
           "**Do not start TXA more than 3 h after injury** — late TXA increased death from bleeding · TXA is **never neuraxial** (boxed warning: inadvertent intrathecal injection has been fatal) — give it IV or IO",
           "Peds TXA (if used, within 3 h): `15 mg/kg` IV (max `1 g`) over 10 min, then `2 mg/kg/h` for 8 h (max `1 g` over the 8 h)",
           "**Calcium with the first unit, then after every `4` units of blood products**: calcium gluconate `3 g` IV (safer peripherally) or calcium chloride `1 g` (preferably a central or deep vein), given slowly through its own line — **never through the blood tubing** (AABB) · local protocols vary (fixed schedule vs iCa-guided)",
@@ -2461,7 +2461,7 @@ export const DIAGNOSES = [
           "Kaolin TEG (TQIP 2014): R `>9 min` → plasma · K `>4 min` → plasma and/or cryo · α-angle `<60°` → cryo and/or plasma · MA `<55 mm` → platelets · LY30 `>7.5%` → antifibrinolytic (TXA only within 3 h of injury) — rapid TEG and newer devices use other cut-points",
           "ROTEM (TQIP 2014): EXTEM CT `>100 s` or INTEM CT `>230 s` → plasma · FIBTEM MCF `<8 mm` → cryo and/or plasma · EXTEM MCF `<45 mm` with FIBTEM MCF `>10 mm` → platelets · EXTEM ML `>15%` → antifibrinolytic (TXA only within 3 h of injury) — cut-points are device-specific; use the local algorithm",
           "**Stop or downgrade the MTP** when surgical bleeding is controlled (or radiographic + physiologic control after embolization) or further resuscitation is futile; notify the blood bank within 1 h and return unused products",
-          "TQIP, once not actively bleeding — stop each product at its own threshold (ceilings, not targets): RBCs at Hgb `≥10 g/dL` · plasma at PT `<18 s` and aPTT `<35 s` · platelets at `>150K` · cryo at fibrinogen `>180 mg/dL` (printed as g/L in TQIP, a typo) · EU instead targets Hgb `7–9 g/dL`",
+          "TQIP, once not actively bleeding — stop each product at its own threshold (ceilings, not targets): RBCs at Hgb `≥10 g/dL` · plasma at PT `<18 s` and aPTT `<35 s` · platelets at `>150K` · EU instead targets Hgb `7–9 g/dL` · TQIP's cryo stop-point is misprinted in the source and left out",
         ],
       },
       {
@@ -2483,7 +2483,7 @@ export const DIAGNOSES = [
           "Target plasma:RBC `1:1` and weight-based platelets:RBC `1:1`; low-titer O whole blood may be considered (PTHSCC)",
           "TXA within 3 h may be considered (very low-certainty evidence): `15 mg/kg` IV (max `1 g`) over 10 min, then `2 mg/kg/h` for 8 h (max `1 g` over the 8 h)",
           "**No permissive hypotension in children** — resuscitate to normal end-organ perfusion (PTHSCC)",
-          "Hypocalcemia, hyperkalemia, hypoglycemia and hypothermia develop fast — check iCa, K⁺, glucose and temperature often; calcium gluconate `60 mg/kg` (max `3 g`) IV/IO for low iCa — label: dilute to `10–50 mg/mL`, no faster than `100 mg/min`",
+          "Hypocalcemia, hyperkalemia, hypoglycemia and hypothermia develop fast — check iCa, K⁺, glucose and temperature often; calcium gluconate `60 mg/kg` (max `2 g`) IV for low iCa, or IO when there is no IV — extrapolated, since no pediatric MTP guideline gives a dose: the label covers ages over 1 month and under 17 y at 29–60 mg/kg, with a 1–2 g adult bolus, and JTS gives adults calcium IV/IO; label: dilute to `10–50 mg/mL`, no faster than `100 mg/min`",
         ],
       },
       {
@@ -3132,9 +3132,9 @@ export const DIAGNOSES = [
       {
         heading: "1. Cardiac membrane stabilization (ECG changes present)",
         items: [
-          "`Calcium gluconate 1 g IV` (10 mL of 10% solution) over 2–3 min; onset 1–3 min, lasts 30–60 min",
-          "Repeat `1 g IV q5 min × 3` if ECG changes persist or worsen",
-          "Use `Calcium chloride 1 g` (central line preferred) for faster ionized calcium rise if coding",
+          "`Calcium chloride 1 g IV` (10 mL of 10%) over 5 min, preferably via a central or deep vein — RCUK/ERC 2025's rate for ECG changes, faster than the label's routine 1 mL/min — or `Calcium gluconate 3 g IV` (30 mL of 10%) over 10 min, safer through a peripheral IV (RCUK gives it when chloride is unavailable; MHRA 2023); onset 1–3 min, lasts 30–60 min",
+          "Recheck the ECG 5–10 min after the calcium; if the changes remain, repeat the calcium dose (MHRA 2023)",
+          "In cardiac arrest: calcium chloride and bicarbonate through separate lines, since they precipitate together — see In cardiac arrest from hyperkalemia, below",
           "**Does NOT lower K+** — only stabilizes cardiac membrane",
         ],
       },
@@ -3214,7 +3214,7 @@ export const DIAGNOSES = [
       },
       {
         heading: "References",
-        items: ["Tintinalli 9e Ch 20", "Elliott et al, BMJ 2010", "Rafique, J Intensive Care Med 2018", "LITFL Hyperkalemia", "AHA 2025 Guidelines, Part 10: Special Circumstances (hyperkalemia, Table 3)", "RCUK 2025 Special Circumstances guideline (ERC 2025)"],
+        items: ["Tintinalli 9e Ch 20", "Elliott et al, BMJ 2010", "Rafique, J Intensive Care Med 2018", "LITFL Hyperkalemia", "AHA 2025 Guidelines, Part 10: Special Circumstances (hyperkalemia, Table 3)", "RCUK 2025 Special Circumstances guideline (ERC 2025)", "MHRA National Patient Safety Alert NatPSA/2023/007: calcium gluconate in severe hyperkalaemia"],
       },
     ],
   },
@@ -3952,7 +3952,7 @@ export const DIAGNOSES = [
         items: [
           "**Procainamide** `20–50 mg/min IV` until arrhythmia suppressed, hypotension, QRS widens >50%, or max `17 mg/kg` (preferred — PROCAMIO trial)",
           "**Amiodarone** `150 mg IV over 10 min`, repeat as needed; then infusion `1 mg/min ×6h`",
-          "**Lidocaine** `1–1.5 mg/kg IV` (esp. ischemic VT); repeat 0.5–0.75 mg/kg q5–10 min (max 3 mg/kg)",
+          "**Lidocaine** `1–1.5 mg/kg IV`; repeat `0.5–0.75 mg/kg` q5–10 min (max `3 mg/kg`) — AHA 2025: less effective for stable VT than procainamide, amiodarone or sotalol, and its benefit over placebo is unclear",
           "Have pads on and prepare for synchronized cardioversion if deterioration or drug failure",
         ],
       },
@@ -3991,7 +3991,7 @@ export const DIAGNOSES = [
         items: [
           "**Procainamide** preferred for stable monomorphic VT (PROCAMIO 2017 — fewer major cardiac events vs amiodarone); avoid if QT prolonged, severe HF, or renal failure (accumulation)",
           "**Amiodarone** reasonable, especially with poor LV function; watch hypotension with rapid infusion",
-          "**Lidocaine** best for ischemia-related VT; less effective for non-ischemic",
+          "**Lidocaine**: for stable wide-complex tachycardia, AHA 2025 says amiodarone, procainamide or sotalol may be considered (2b); lidocaine is less effective than these, and it is unclear whether it beats placebo",
           "Avoid combining multiple QT/AV agents; reassess QRS/QT and BP frequently",
         ],
       },
@@ -4069,7 +4069,7 @@ export const DIAGNOSES = [
       {
         heading: "ROSC — first steps",
         items: [
-          "**O₂ `100%`** until SpO₂/PaO₂ can be measured reliably, then titrate to SpO₂ `90–98%` (PaO₂ `60–105 mmHg`) — avoid hypoxemia",
+          "**O₂ `100%`** until SpO₂/PaO₂ can be measured reliably, then titrate to SpO₂ `94–98%` (PaO₂ `75–100 mmHg`) per ERC 2025 and ILCOR — AHA 2025 allows `90–98%`; avoid both hypoxemia and hyperoxemia",
           "**PaCO₂ `35–45 mmHg`** if comatose — check a blood gas; ETCO₂ can read falsely low after arrest",
           "**MAP `≥65 mmHg`** — fluids + vasopressor (no agent proven best after arrest; norepinephrine is first-line in cardiogenic and septic shock)",
           "**12-lead ECG now and repeat** (ECGs in the first 8 min after ROSC over-call STEMI) — **ST elevation → emergent coronary angiography**, comatose or not",
@@ -4181,6 +4181,7 @@ export const DIAGNOSES = [
           "Cheskes et al, DOSE-VF, NEJM 2022 · Kudenchuk et al, ALPS, NEJM 2016",
           "Dankiewicz et al, TTM2, NEJM 2021 · Kjaergaard et al and Schmidt et al, BOX, NEJM 2022",
           "Lemkes et al, COACT, NEJM 2019 · Desch et al, TOMAHAWK, NEJM 2021 · Yannopoulos et al, ARREST, Lancet 2020",
+          "RCUK 2025 Post-resuscitation care guideline (ERC–ESICM 2025): oxygen and blood-pressure targets",
         ],
       },
     ],
@@ -4722,7 +4723,7 @@ export const DIAGNOSES = [
           "**Posaconazole** (CDC 2025) — adults `300 mg` IV or DR tablet BID ×2 doses, then `300 mg` daily; peds `6–10 mg/kg/dose` BID ×2 doses, then `6–10 mg/kg/dose` daily; 28-day course; CDC max `300 mg/day` (its loading doses exceed this — confirm with ID or pharmacy)",
           "Posaconazole's optimal dose for PAM is unknown — dose by drug levels. CDC: choose the azole individually; posaconazole has better in vitro activity than fluconazole, which 3 of 4 US survivors received",
           "**Dexamethasone** `0.6 mg/kg/day IV div q6h` ×4 days for cerebral edema",
-          "Consider **therapeutic hypothermia** (32–34°C × 24h) — adjunct in surviving cases",
+          "**Therapeutic hypothermia** is not in CDC's current regimen (Nov 2025); one 2013 survivor's ICP management, run on traumatic-brain-injury principles, included it (Linam 2015)",
         ],
       },
       {
@@ -4734,7 +4735,7 @@ export const DIAGNOSES = [
       },
       {
         heading: "Dispo",
-        items: ["ICU; mortality >97%; rare survivors had early diagnosis + aggressive combo + miltefosine + hypothermia"],
+        items: ["ICU; mortality >97%; the rare survivors got combination therapy, and the three most recent US survivors also received miltefosine (CDC)"],
       },
     ],
     extended: [
@@ -10948,7 +10949,7 @@ export const DIAGNOSES = [
         "**Albuterol** `2.5–5 mg` neb q20 min × 3, or `4–8 puffs` MDI + spacer q20 min — severe: **high dose plus ipratropium** q20 min, or **continuous** `10–15 mg/h` (EPR-3)",
         "Peds (≤12 y): albuterol `0.15 mg/kg` neb (min `2.5 mg`, max `5 mg`) q20 min × 3, or continuous `0.5 mg/kg/h` (max `15 mg/h`); or MDI `4–8 puffs` + spacer q20 min × 3, with a mask under 4 y — the maxima are the adult doses (EPR-3 gives none)",
         "**Ipratropium** `0.5 mg` neb q20 min × 3, mixed into the albuterol neb (peds `0.25–0.5 mg`), or MDI `8 puffs` q20 min as needed for up to 3 h (peds `4–8 puffs`) — ED only; no added benefit once admitted (EPR-3)",
-        "**Systemic steroids within the first hour — give the first dose now**: prednisone `40–80 mg/day` PO as one dose or two (peds `1–2 mg/kg/day` divided in 2 doses, max `60 mg/day`); IV methylprednisolone in the same EPR-3 range only if the gut is unreliable or the patient is failing (EPR-3)",
+        "**Systemic steroids within the first hour — give the first dose now**: prednisone `40–80 mg/day` PO as one dose or two (peds: EPR-3 `1–2 mg/kg/day` in 2 doses, max `60 mg/day`; or GINA `1–2 mg/kg` once daily, max `40 mg`); IV methylprednisolone in the same EPR-3 range only if the gut is unreliable or the patient is failing (EPR-3)",
         "Peds alternative: **dexamethasone** `0.6 mg/kg` PO (max `16 mg`) daily × 2 doses — relapse rates similar to 5 days of prednisone, less vomiting",
       ],
     },
@@ -10956,7 +10957,7 @@ export const DIAGNOSES = [
       heading: "Still severe at 1 hour, or life-threatening",
       items: [
         "**Magnesium sulfate** `2 g` IV once (peds `25–75 mg/kg`, max `2 g`) — for life-threatening attacks or still severe after 1 h of full therapy (EPR-3); infuse over `20 min` at any age — never a push or a continuous drip (BTS/SIGN for adults, after senior consultation; pediatric reviews); label: no faster than `150 mg/min`; dilute to 20% or less",
-        "**Can't take nebs**: epinephrine 1 mg/mL `0.3–0.5 mg` (`0.3–0.5 mL`) SC q20 min × 3 (peds `0.01 mg/kg`, max `0.3 mg`) — no proven advantage over inhaled SABA (EPR-3). **Any sign of anaphylaxis → epinephrine IM** (see the Anaphylaxis card)",
+        "**Can't take nebs**: epinephrine 1 mg/mL `0.3–0.5 mg` (`0.3–0.5 mL`) **IM into the thigh** q20 min × 3 (peds `0.01 mg/kg`, max `0.3 mg` — the low end of EPR-3's 0.3–0.5 mg, as on the Anaphylaxis card) — EPR-3's doses, given IM because SC absorption is slower (Simons 1998, 2001); no proven advantage over inhaled SABA (EPR-3). **Any sign of anaphylaxis → treat it as anaphylaxis** (see the Anaphylaxis card)",
         "Or **terbutaline** `0.25 mg` SC, one repeat after 15–30 min if needed — label max `0.5 mg` per 4 h; SC only; not recommended under 12 y (label)",
         "**NIV and HFNC are unproven** to prevent intubation — only with close monitoring and intubation set up. A drowsy patient needs a tube, not a mask",
         "**No sedatives outside an intubation plan** (EPR-3, GINA 2026) — induction and delayed sequence intubation are the exceptions. Ketamine is not a rescue bronchodilator: **no benefit** in non-intubated RCTs",
@@ -10968,7 +10969,7 @@ export const DIAGNOSES = [
         "**Intubate now** for apnea or coma; rising PCO2, exhaustion or worsening mental status strongly favor it — semi-electively, before the arrest, by the most experienced operator (EPR-3)",
         "**Ketamine** `1–2 mg/kg` IV + paralytic (see the Rapid Sequence Intubation card); **largest ETT that fits** to lower expiratory resistance",
         "**Fluids ready before induction** — hypotension commonly follows the start of positive-pressure ventilation (EPR-3)",
-        "**Bag slowly.** Adult vent start: TV `6–8 mL/kg` PBW, RR `11–14/min`, PEEP `0–5 cmH2O`; if on volume control, high inspiratory flow `70–100 L/min` lengthens expiration (Stather 2005; adult settings only)",
+        "**Bag slowly.** Adult vent start: TV `6–8 mL/kg` PBW, RR `11–14/min` (Stather 2005), lowered toward `6/min` if the plateau pressure stays high (Leatherman 2004; AHA 2025: low rate and tidal volume); PEEP `0–5 cmH2O`; on volume control, high inspiratory flow `70–100 L/min` lengthens expiration (Stather 2005; adult settings only)",
         "**Permissive hypercapnia** (EPR-3): let PaCO2 rise while pH stays `>7.2`; keep plateau pressure `<30 cmH2O` — if it climbs, **lower the rate** (numbers: Stather 2005)",
         "Measured auto-PEEP can read falsely low — follow the plateau pressure and the BP (Leatherman 1996). Keep albuterol going in-line (EPR-3)",
       ],
@@ -11059,7 +11060,7 @@ export const DIAGNOSES = [
       heading: "Disposition & discharge",
       items: [
         "**Discharge**: FEV1/PEF `≥70%` predicted, sustained `60 min` after the last treatment, no distress (EPR-3); GINA 2026 adds SpO2 `≥92%` on room air",
-        "**Discharge, ward or ICU** (EPR-3): FEV1/PEF `40–69%` with mild–moderate symptoms → individualized decision on admission; `<40%`, PaCO2 `≥42 mmHg`, drowsiness or confusion → ICU",
+        "**Discharge, ward or ICU** — by the response to treatment (EPR-3 Fig 5-6): incomplete response, FEV1/PEF `40–69%` with mild–moderate symptoms → individualized decision on admission; poor response — FEV1/PEF `<40%`, PaCO2 `≥42 mmHg`, severe symptoms, drowsiness or confusion → ICU",
         "Intubated children → pediatric ICU; slow responders may need ICU monitoring even without a tube (EPR-3)",
         "Discharge bundle: steroid course; an ICS-containing controller — ICS-formoterol as both controller and reliever is preferred (GINA 2026 for ≥12 y; NAEPP 2020 for ≥4 y with moderate–severe persistent asthma); inhaler technique; written action plan",
         "Follow-up in `2–7 days` (children `2–5 days`) (GINA 2026)",
@@ -11088,6 +11089,7 @@ export const DIAGNOSES = [
         "Qureshi et al, dexamethasone vs prednisone in pediatric asthma (J Pediatr 2001); Perrin et al, oxygen in severe asthma (Thorax 2011); Howton et al, IV ketamine (Ann Emerg Med 1996); Ruangsomboon et al, high-flow nasal oxygen (Acad Emerg Med 2021)",
         "Tuxen & Lane (Am Rev Respir Dis 1987); Williams et al and Tuxen et al (Am Rev Respir Dis 1992); Leatherman & Ravenscraft (Crit Care Med 1996); Stather & Stewart (Crit Care 2005); Leatherman, Mechanical ventilation for severe asthma (Chest 2015)",
         "ANZCOR Guideline 11.10, Resuscitation in Special Circumstances (2026); AHA 2025 Guidelines Part 10, Special Circumstances of Resuscitation",
+        "Simons et al, epinephrine absorption, IM vs SC, in children (J Allergy Clin Immunol 1998) and adults (J Allergy Clin Immunol 2001); Leatherman et al, expiratory time and dynamic hyperinflation (Crit Care Med 2004)",
       ],
     },
   ],

@@ -3581,7 +3581,7 @@ export const ANTIBIOTICS = [
       { name: "Dexamethasone", dose: "0.6 mg/kg/day IV in 4 divided doses × 4 days", note: "Cerebral edema" },
     ],
     alternatives: [
-      { name: "Therapeutic hypothermia (32–34°C)", note: "Considered adjunct" },
+      { name: "Nitroxoline (investigational)", note: "Through CDC's expanded-access program; call CDC EOC 770-488-7100" },
     ],
     duration: "28 days (amphotericin: IV 14 days, intrathecal 10 days; dexamethasone 4 days)",
     pearls: [

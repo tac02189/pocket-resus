@@ -38,7 +38,7 @@ const CASES = [
     'id: "cap-inpatient",\n    name: "CAP — Inpatient (Moderate–Severe)",\n    category: "resp"',
     'id: "cap-inpatient",\n    name: "CAP — Inpatient (Moderate–Severe)",\n    category: "respiratory"', "is not defined"],
   ["unclosed dose chip", "src/data/diagnoses.js",
-    "`Calcium gluconate 1 g IV` (10 mL", "`Calcium gluconate 1 g IV (10 mL", "unpaired"],
+    "`Calcium gluconate 3 g IV` (30 mL", "`Calcium gluconate 3 g IV (30 mL", "unpaired"],
   ["pinned home tile pointing at a renamed id", "src/data/diagnoses.js",
     'id: "rsi"', 'id: "rapid-sequence-intubation"', "/dx/rsi"],
   // Holes found in the first version by the 2026-10-15 Codex and Gemini reviews:
